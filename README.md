@@ -23,6 +23,6 @@ resultados (cards) com pelo menos 6 resultados.<br>
   -**Mais detalhes: http://www.furtado.prof.ufu.br/site/teaching/PPI/PPI-ProjetoWeb-Anuncios-2023.pdf**<br>
   
   # **Entrega 2**
-  Esta parte é focada no back-end e polimento do trabalho, além de juntar as partes 
+  Esta parte é focada no back-end e polimento do trabalho, além de juntar as partes.
   ## Precisa-se entregar:
   
