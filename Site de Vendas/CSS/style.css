@@ -1,0 +1,45 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(219, 224, 236);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+    color: white;
+    background-color:rgb(54, 51, 117);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 5px;
+}
+
+.propaganda{
+    width: 90%;
+    padding: 5%;
+    margin: 2% auto;
+    border-radius: 10px;
+    background-color: rgb(168, 176, 231);
+    justify-content: center;
+}
+
+img, input{
+    margin: 10px;
+}
+
+footer{
+    color: white;
+    background-color:rgb(54, 51, 117);
+    padding: 5%;
+}
+
+.conteudo-main{
+    width: 80%;
+    margin: 0 auto;
+}
