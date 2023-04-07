@@ -1,16 +1,22 @@
+:root {
+    --cinzaAzulado: rgb(219, 224, 236);
+    --azulEscuro: rgb(54, 51, 117);
+    --azulClaro: rgb(168, 176, 231);
+}
 body{
     padding: 0;
     margin: 0;
-    background-color: rgb(219, 224, 236);
+    background-color: var(--cinzaAzulado);
 }
 
 header{
     display: flex;
     justify-content: space-around;
     width: 100%;
+
     
     color: white;
-    background-color:rgb(54, 51, 117);
+    background-color: var(--azulEscuro);
 }
 
 nav{
@@ -25,21 +31,50 @@ nav{
     padding: 5%;
     margin: 2% auto;
     border-radius: 10px;
-    background-color: rgb(168, 176, 231);
+    background-color: var(--azulClaro);
     justify-content: center;
 }
 
-img, input{
-    margin: 10px;
-}
+
 
 footer{
     color: white;
-    background-color:rgb(54, 51, 117);
+    background-color:var(--azulEscuro);
     padding: 5%;
 }
 
 .conteudo-main{
     width: 80%;
     margin: 0 auto;
+}
+
+.botaoLogo{
+    padding: 5px 20px;
+    background-color: white;
+    border: 0px none;
+    border-radius: 25px;
+    margin: 5px;
+}
+.botaoLogo:active{
+    background-color: var(--cinzaAzulado);
+}
+.headerIcon{
+    fill: white;
+}
+.busca{
+    /* implementar tamanho maior pra esquerda */
+}
+
+.botaoBusca{
+    border: 0px none;
+    background-color: rgba(139, 69, 19, 0);
+
+}
+.caixaBusca{
+    width: 160%;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-top: 7%;
+    border: 0px none;
+    border-radius: 25px;
 }
