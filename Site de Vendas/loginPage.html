@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <button class="botaoLogo">
+            <div>
+                <img src="Images/logoUFU.png" alt="logo" width="70px" height="70px">
+            </div>
+        </button>
+        <form action="" class="busca">
+            <input type="text" class="caixaBusca">
+            <button class="botaoBusca"><img src="Images/search.svg" width="42" height="42" alt="Botao de busca"></button>
+        </form>
+        <img src="Images/shopping.svg" alt="anuncios" width="42" height="42" class="headerIcon">
+        <img src="Images/profile.svg" alt="profile" width="42" height="42" class="headerIcon">
+        <img src="Images/heart.svg" alt="lista de desejos" width="42" height="42" class="headerIcon">
+        <img src="Images/cart.svg" alt="carrinho" width="42" height="42" class="headerIcon">
+
+    </header>
+
+    <nav>
+        <div>seção</div>
+        <div>seção</div>
+        <div>seção</div>
+        <div>seção</div>
+    </nav>
+
+    <form id="login-box">
+        <h3>Login</h3>
+        <div>
+            <label class="login-label" for="email">E-mail</label>
+            <input class="login-input" id="login-input" name="email" email" type="text" placeholder="Email">
+        </div>
+        <div>
+            <label class="login-label" for="senha">Senha</label>
+            <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha" autocomplete="off">
+        </div>
+
+        <button id="login-button" type="button">Finalizar</button>
+    </form>
+
+    <form id="register-box">
+        <h3>Registre-se</h3>
+        <div>
+            <label class="login-label" for="email">E-mail</label>
+            <input class="login-input" id="login-input" name="email" type="email" placeholder="Email">
+        </div>
+        <div>
+            <label class="login-label" for="senha">Senha</label>
+            <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha" autocomplete="off">
+        </div>
+        <div>
+            <label class="login-label" for="conf-senha">Senha</label>
+            <input class="login-input" id="conf-senha" name="confirmaSenha" type="password" placeholder="Confirma senha" autocomplete="off">
+        </div>
+        <div>
+            <label class="login-label" for="cpf">CPF</label>
+            <input class="login-input" id="cpf" name="cpf" type="text" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+        </div>
+        
+        <label class="switch">
+            <input id="noticias" name="noticias" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+
+        <div style="display: absolute; margin: -20px; margin-left: 20px; box-sizing: border-box;">
+            <label class="login-label" for="noticias">Receber Noticias</label>
+        </div>
+
+        <button id="login-button" type="button">Finalizar</button>
+    </form>
+    
+    <footer>
+        <h3 class="contact-title">Contato e etc</h3>
+    </footer>
+</body>
+</html>
