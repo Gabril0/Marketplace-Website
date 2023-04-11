@@ -82,6 +82,44 @@ nav ul ul li a{
   padding: 10px;
 }
 
+.produto{
+  border: 0 none;
+  border-radius: 25px;
+  position: relative;
+  width: 12%;
+  text-align: center;
+  background-color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 0.2%;
+}
+
+.nomeProduto{
+  color: var(--azulEscuro);
+  text-align: left;
+  font-size: 1.1em;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.precoOriginal{
+  color: var(--azulClaro);
+  text-decoration: line-through;
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 0;
+
+}
+
+.precoDesconto{
+  text-align: left;
+  padding-left: 10px;
+  font-size: 1.2em;
+  font-weight: bolder;
+  margin-top: 0;
+}
+
 .propaganda{
     width: 90%;
     padding: 5%;
