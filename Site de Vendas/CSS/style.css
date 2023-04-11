@@ -16,28 +16,70 @@ header{
 }
 
 nav{
-    
+    font-family: sans-serif;
+    font-weight: bold;
     background-color: white;
-
     text-align: center;
     border-radius: 0px 0px 50px 50px;
-}
-
-.navOptions{
-  border: 0px none;
-  border-radius: 0px 0px 50px 50px;
-  font-weight: bold;
-  font-family: sans-serif;
-  color: var(--azulEscuro);
+    position: sticky;
+    top: 0;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 0px 0px 50px 50px;
+  }
+  
+  nav ul li{
+  border-radius: 0px;
   display: inline-block;
-  padding: 15px 10px;
-  width: 22%;
-  border-right: 1px var(--azulEscuro);
-
-
+  position: relative;
+  padding: 10px;
+  width: 20%;
 }
-.navOptions:active{
+nav ul li:hover{
   background-color: var(--cinzaAzulado);
+}
+nav ul li:hover ul{
+  width: 100%;
+  display: block;
+  
+}
+nav ul li ul li:hover a{
+  background-color: var(--azulEscuro);
+  color: white;
+  font-weight: bold;
+}
+nav ul li ul li:hover{
+  background-color: var(--azulEscuro);
+  color: white;
+  font-weight: bold;
+}
+
+nav ul ul{
+  font-weight: 100;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  border-radius: 0px 0px 15px 15px;
+}
+
+nav ul ul li{
+  border-radius: 0px 0px 15px 15px;
+  text-align: left;
+  width: auto;
+  display: block;
+}
+
+nav ul ul li a{
+  display: block;
+  text-decoration: none;
+  color: var(--azulEscuro);
+  padding: 10px;
 }
 
 .propaganda{
@@ -56,6 +98,7 @@ footer{
     background-color:var(--azulEscuro);
     padding: 5%;
 }
+
 
 .conteudo-main{
     width: 80%;
@@ -76,13 +119,17 @@ footer{
 .headerIcons{
     display: inline-block;
     position: absolute;
-    top: 35px;
-    right: 50px;
+    top: 4%;
+    right: 2%;
     filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(263deg) brightness(116%) contrast(100%);
 }
 
 .headerSingleIcon{
   margin: 0px 40px;
+}
+.headerButton{
+  background-color: rgba(76, 0, 130, 0);
+  border: 0px none;
 }
 .busca{
     position: absolute;
@@ -94,7 +141,7 @@ footer{
 .botaoBusca{
     position: relative;
     top: -43px;
-    left: 530px; /*CONSERTAR ISSO POR FAVOR*/
+    left: 144%; /*CONSERTAR ISSO POR FAVOR*/
     border: 0px none;
     background-color: rgba(139, 69, 19, 0);   
     filter: invert(18%) sepia(13%) saturate(6695%) hue-rotate(221deg) brightness(55%) contrast(90%); 
@@ -118,22 +165,6 @@ footer{
 .caixaBusca:focus{
   outline: none;
   border: 0px none ;
-}
-
-.dropBox{
-    font-weight: bold;
-    font-family: sans-serif;
-    background-color: white;
-    visibility: visible;
-    display: inline-block;
-    padding: 20px 100px 20px 20px;
-    border-radius: 0px 0px 50px 50px;
-
-}
-
-.dropBoxItems{
-  margin-right: 100px;
-  color: var(--azulEscuro);
 }
 
 h3{
