@@ -1,215 +1,215 @@
 :root {
-    --cinzaAzulado: rgb(219, 224, 236);
-    --azulEscuro: #363375;
-    --azulClaro: rgb(168, 176, 231);
+  --cinzaAzulado: rgb(219, 224, 236);
+  --azulEscuro: #363375;
+  --azulClaro: rgb(168, 176, 231);
 }
 body{
-    padding: 0;
-    margin: 0;
-    background-color: var(--cinzaAzulado);
+  padding: 0;
+  margin: 0;
+  background-color: var(--cinzaAzulado);
 }
 
 header{
-    width: 100%;
-    color: white;
-    background-color: var(--azulEscuro);
+  width: 100%;
+  color: white;
+  background-color: var(--azulEscuro);
 }
 
 nav{
-    font-family: sans-serif;
-    font-weight: bold;
-    background-color: white;
-    text-align: center;
-    border-radius: 0px 0px 50px 50px;
-    position: sticky;
-    top: 0;
-  }
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    border-radius: 0px 0px 50px 50px;
-  }
-  
-  nav ul li{
-  border-radius: 0px;
-  display: inline-block;
-  position: relative;
-  padding: 10px;
-  width: 20%;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: white;
+  text-align: center;
+  border-radius: 0px 0px 50px 50px;
+  position: sticky;
+  top: 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-radius: 0px 0px 50px 50px;
+}
+
+nav ul li{
+border-radius: 0px;
+display: inline-block;
+position: relative;
+padding: 10px;
+width: 20%;
 }
 nav ul li:hover{
-  background-color: var(--cinzaAzulado);
+background-color: var(--cinzaAzulado);
 }
 nav ul li:hover ul{
-  width: 100%;
-  display: block;
-  
+width: 100%;
+display: block;
+
 }
 nav ul li ul li:hover a{
-  background-color: var(--azulEscuro);
-  color: white;
-  font-weight: bold;
+background-color: var(--azulEscuro);
+color: white;
+font-weight: bold;
 }
 nav ul li ul li:hover{
-  background-color: var(--azulEscuro);
-  color: white;
-  font-weight: bold;
+background-color: var(--azulEscuro);
+color: white;
+font-weight: bold;
 }
 
 nav ul ul{
-  font-weight: 100;
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 0;
-  border-radius: 0px 0px 15px 15px;
+font-weight: 100;
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+padding: 0;
+border-radius: 0px 0px 15px 15px;
 }
 
 nav ul ul li{
-  border-radius: 0px 0px 15px 15px;
-  text-align: left;
-  width: auto;
-  display: block;
+border-radius: 0px 0px 15px 15px;
+text-align: left;
+width: auto;
+display: block;
 }
 
 nav ul ul li a{
-  display: block;
-  text-decoration: none;
-  color: var(--azulEscuro);
-  padding: 10px;
+display: block;
+text-decoration: none;
+color: var(--azulEscuro);
+padding: 10px;
 }
 
 .produto{
-  border: 0 none;
-  border-radius: 25px;
-  position: relative;
-  width: 12%;
-  text-align: center;
-  background-color: white;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 0.2%;
+border: 0 none;
+border-radius: 25px;
+position: relative;
+width: 12%;
+text-align: center;
+background-color: white;
+font-family: sans-serif;
+font-weight: bold;
+padding: 0.2%;
 }
 
 .nomeProduto{
-  color: var(--azulEscuro);
-  text-align: left;
-  font-size: 1.1em;
-  overflow: hidden;
-  margin-top: 0;
-  margin-bottom: 0;
+color: var(--azulEscuro);
+text-align: left;
+font-size: 1.1em;
+overflow: hidden;
+margin-top: 0;
+margin-bottom: 0;
 }
 
 .precoOriginal{
-  color: var(--azulClaro);
-  text-decoration: line-through;
-  text-align: left;
-  padding-left: 10px;
-  margin-bottom: 0;
+color: var(--azulClaro);
+text-decoration: line-through;
+text-align: left;
+padding-left: 10px;
+margin-bottom: 0;
 
 }
 
 .precoDesconto{
-  text-align: left;
-  padding-left: 10px;
-  font-size: 1.2em;
-  font-weight: bolder;
-  margin-top: 0;
+text-align: left;
+padding-left: 10px;
+font-size: 1.2em;
+font-weight: bolder;
+margin-top: 0;
 }
 
 .propaganda{
-    width: 90%;
-    padding: 5%;
-    margin: 2% auto;
-    border-radius: 10px;
-    background-color: var(--azulClaro);
-    justify-content: center;
+  width: 90%;
+  padding: 5%;
+  margin: 2% auto;
+  border-radius: 10px;
+  background-color: var(--azulClaro);
+  justify-content: center;
 }
 
 
 
 footer{
-    color: white;
-    background-color:var(--azulEscuro);
-    padding: 5%;
+  color: white;
+  background-color:var(--azulEscuro);
+  padding: 5%;
 }
 
 
 .conteudo-main{
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .botaoLogo{
-  padding: 5px 20px;
-  background-color: white;
-  border: 0px none;
-  border-radius: 25px;
-  margin: 20px;
-  margin-left: 50px;
+padding: 5px 20px;
+background-color: white;
+border: 0px none;
+border-radius: 25px;
+margin: 20px;
+margin-left: 50px;
 }
 .botaoLogo:active{
-    background-color: var(--cinzaAzulado);
+  background-color: var(--cinzaAzulado);
 }
 .headerIcons{
-    display: inline-block;
-    position: absolute;
-    top: 4%;
-    right: 2%;
-    filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(263deg) brightness(116%) contrast(100%);
+  display: inline-block;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(263deg) brightness(116%) contrast(100%);
 }
 
 .headerSingleIcon{
-  margin: 0px 40px;
+margin: 0px 40px;
 }
 .headerButton{
-  background-color: rgba(76, 0, 130, 0);
-  border: 0px none;
+background-color: rgba(76, 0, 130, 0);
+border: 0px none;
 }
 .busca{
-    position: absolute;
-    top: 35px;
-    
-    left: 200px;
+  position: absolute;
+  top: 35px;
+  
+  left: 200px;
 }
 
 .botaoBusca{
-    position: relative;
-    top: -43px;
-    left: 144%; /*CONSERTAR ISSO POR FAVOR*/
-    border: 0px none;
-    background-color: rgba(139, 69, 19, 0);   
-    filter: invert(18%) sepia(13%) saturate(6695%) hue-rotate(221deg) brightness(55%) contrast(90%); 
+  position: relative;
+  top: -43px;
+  left: 144%; /*CONSERTAR ISSO POR FAVOR*/
+  border: 0px none;
+  background-color: rgba(139, 69, 19, 0);   
+  filter: invert(18%) sepia(13%) saturate(6695%) hue-rotate(221deg) brightness(55%) contrast(90%); 
 }
 
 .botaoBusca:active{
-  filter: invert(18%) sepia(13%) saturate(6695%) hue-rotate(221deg) brightness(100%) contrast(90%); 
+filter: invert(18%) sepia(13%) saturate(6695%) hue-rotate(221deg) brightness(100%) contrast(90%); 
 
 }
 .caixaBusca{
-    color: var(--azulEscuro);
-    position: relative;
-    width: 140%;
-    padding: 10px 20px;
-    padding-right: 50px;
-    font-size: 1.2em;
-    margin-top: 10px;
-    border: 0px none;
-    border-radius: 25px;
+  color: var(--azulEscuro);
+  position: relative;
+  width: 140%;
+  padding: 10px 20px;
+  padding-right: 50px;
+  font-size: 1.2em;
+  margin-top: 10px;
+  border: 0px none;
+  border-radius: 25px;
 }
 .caixaBusca:focus{
-  outline: none;
-  border: 0px none ;
+outline: none;
+border: 0px none ;
 }
 
 h3{
-    text-align: center;
-    font-size: 40px;
-    color: #3b3b79;
-    font-family: sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: #3b3b79;
+  font-family: sans-serif;
 }
 
 .login-input{
@@ -256,8 +256,8 @@ h3{
     font-weight: bold;
    
     border: none;
-    margin-left: 35%;
-    margin-top: 12%;
+    margin-left: 40%;
+    margin-top: 20%;
 }
 
 #login-button:hover{
@@ -266,8 +266,8 @@ h3{
 
 #login-box {
     background-color: white;
-    width: 21%;
-    height: 42%;
+    width: 400px;
+    height: 450px;
     box-sizing: border-box;
     
     padding: 30px;
@@ -275,14 +275,14 @@ h3{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-130%, -40%);
+    transform: translate(-130%, -60%);
     border-radius: 20px;
 }
 
 #register-box{
     background-color: white;
-    width: 21%;
-    height: 55%;
+    width: 400px;
+    height: 550px;
     box-sizing: border-box;
     
     padding: 30px;
@@ -383,11 +383,10 @@ h3{
   }
 
   #config-board{
-    box-sizing: border-box;
-
     background-color: white;
-    width: 18%;
-    height: 60%;
+    width: 380px;
+    height: 550px;
+    box-sizing: border-box;
     
     padding: 30px;
 
@@ -413,14 +412,15 @@ h3{
 
   #config-menu{
     background: white;
+    width: 650px;
+    height: 550px;
+    box-sizing: border-box;
 
-    width: 30%;
-    height: 60%;
+    padding: 30px;
 
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-20%, -50%);
+    top: 20%;
+    left: 45%;
     border-radius: 20px;
 
     padding: 40px;
@@ -445,7 +445,7 @@ h3{
 
 .upload-button {
     position: absolute;
-    transform: translate(-220px, -147px);
+    transform: translate(-250px, -190px);
 }
 
 login-button:hover, #login-button:hover{

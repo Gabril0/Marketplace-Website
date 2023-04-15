@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-
     <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
     <header>
         <button class="botaoLogo">
@@ -21,10 +22,14 @@
                     alt="Botao de busca"></button>
         </form>
         <div class="headerIcons">
-            <a class="headerA" href="index.html"><img src="Images/shopping.svg" alt="anuncios" width="42" height="42" class="headerSingleIcon"></a>
-            <a class="headerA" href="perfilPage.html"><img src="Images/profile.svg" alt="profile" width="42" height="42" class="headerSingleIcon"></a>
-            <a class="headerA" href="index.html"><img src="Images/heart.svg" alt="lista de desejos" width="42" height="42" class="headerSingleIcon"></a>
-            <a class="headerA" href="index.html"><img src="Images/cart.svg" alt="carrinho" width="42" height="42" class="headerSingleIcon"></a>
+            <a class="headerA" href="index.html"><img src="Images/shopping.svg" alt="anuncios" width="42" height="42"
+                    class="headerSingleIcon"></a>
+            <a class="headerA" href="perfilPage.html"><img src="Images/profile.svg" alt="profile" width="42" height="42"
+                    class="headerSingleIcon"></a>
+            <a class="headerA" href="index.html"><img src="Images/heart.svg" alt="lista de desejos" width="42"
+                    height="42" class="headerSingleIcon"></a>
+            <a class="headerA" href="index.html"><img src="Images/cart.svg" alt="carrinho" width="42" height="42"
+                    class="headerSingleIcon"></a>
         </div>
 
     </header>
@@ -69,49 +74,51 @@
             </li>
         </ul>
     </nav>
-    
-    <div id="config-board">
-        <div class="container-image">
-            <img  id="avatar" class="avatar" src="resources/avatar.svg">
-        </div>
-        <ul class="configs">
-            <li class="item-config"><a href="">Informações cadastrais</a></li>
-            <li class="item-config"><a href="">Dados do endereço</a></li>
-            <li class="item-config"><a href="">Configurações de notificação</a></li>
-            <li class="item-config"><a href="">Pedidos</a></li>
-            <li class="item-config"><a href="">Dúvidas</a></li>
-        </ul>
-    </div>
 
-    <div id="config-menu">
-        <div style="margin-left: 50px;">
-            <label class="login-label" for="nome">Nome</label>
-            <input class="login-input" type="text" id="nome" placeholder="Nome">
+    <main>
+        <div id="config-board">
+            <div class="container-image">
+                <img id="avatar" class="avatar" src="resources/avatar.svg">
+            </div>
+            <ul class="configs">
+                <li class="item-config"><a href="">Informações cadastrais</a></li>
+                <li class="item-config"><a href="">Dados do endereço</a></li>
+                <li class="item-config"><a href="">Configurações de notificação</a></li>
+                <li class="item-config"><a href="">Pedidos</a></li>
+                <li class="item-config"><a href="">Dúvidas</a></li>
+            </ul>
         </div>
 
-        <ul class="options">
-            <li class="item-options">Modo Vendedor</li>
-            <li class="item-options">Salvar cartão</li>
-            <li class="item-options">Mudar foto de perfil</li>
-        </ul>
+        <div id="config-menu">
+            <div style="margin-left: 50px;">
+                <label class="login-label" for="nome">Nome</label>
+                <input class="login-input" type="text" id="nome" placeholder="Nome">
+            </div>
 
-        <label id="config-switch" class="switch">
-            <input id="noticias" name="noticias" type="checkbox">
-            <span class="slider round"></span>
-        </label>
+            <ul class="options">
+                <li class="item-options">Modo Vendedor</li>
+                <li class="item-options">Salvar cartão</li>
+                <li class="item-options">Mudar foto de perfil</li>
+            </ul>
 
-        <label id="config-switch" class="switch">
-            <input id="noticias" name="noticias" type="checkbox">
-            <span class="slider round"></span>
-        </label>
+            <label id="config-switch" class="switch">
+                <input id="noticias" name="noticias" type="checkbox">
+                <span class="slider round"></span>
+            </label>
 
-        <button id="login-button" class="upload-button" type="button">Upload</button>
-        <button style="margin-left: 40%; margin-top: 30%;" id="login-button" type="button">Salvar</button>
+            <label id="config-switch" class="switch">
+                <input id="noticias" name="noticias" type="checkbox">
+                <span class="slider round"></span>
+            </label>
 
-    </div>
+            <button id="login-button" class="upload-button" type="button">Upload</button>
+            <button id="login-button" type="button">Salvar</button>
 
+        </div>
+    </main>
     <footer>
         <h3 class="contact-title">Contato e etc</h3>
     </footer>
 </body>
+
 </html>

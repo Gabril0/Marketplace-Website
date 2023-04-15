@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
     <header>
         <button class="botaoLogo">
@@ -20,10 +22,14 @@
                     alt="Botao de busca"></button>
         </form>
         <div class="headerIcons">
-            <a class="headerA" href="index.html"><img src="Images/shopping.svg" alt="anuncios" width="42" height="42" class="headerSingleIcon"></a>
-            <a class="headerA" href="perfilPage.html"><img src="Images/profile.svg" alt="profile" width="42" height="42" class="headerSingleIcon"></a>
-            <a class="headerA" href="index.html"><img src="Images/heart.svg" alt="lista de desejos" width="42" height="42" class="headerSingleIcon"></a>
-            <a class="headerA" href="index.html"><img src="Images/cart.svg" alt="carrinho" width="42" height="42" class="headerSingleIcon"></a>
+            <a class="headerA" href="index.html"><img src="Images/shopping.svg" alt="anuncios" width="42" height="42"
+                    class="headerSingleIcon"></a>
+            <a class="headerA" href="perfilPage.html"><img src="Images/profile.svg" alt="profile" width="42" height="42"
+                    class="headerSingleIcon"></a>
+            <a class="headerA" href="index.html"><img src="Images/heart.svg" alt="lista de desejos" width="42"
+                    height="42" class="headerSingleIcon"></a>
+            <a class="headerA" href="index.html"><img src="Images/cart.svg" alt="carrinho" width="42" height="42"
+                    class="headerSingleIcon"></a>
         </div>
 
     </header>
@@ -69,53 +75,59 @@
         </ul>
     </nav>
 
-    <form id="login-box">
-        <h3>Login</h3>
-        <div>
-            <label class="login-label" for="email">E-mail</label>
-            <input class="login-input" id="login-input" name="email" email" type="text" placeholder="Email">
-        </div>
-        <div>
-            <label class="login-label" for="senha">Senha</label>
-            <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha" autocomplete="off">
-        </div>
+    <main>
+        <form id="login-box">
+            <h3>Login</h3>
+            <div>
+                <label class="login-label" for="email">E-mail</label>
+                <input class="login-input" id="login-input" name="email" email" type="text" placeholder="Email">
+            </div>
+            <div>
+                <label class="login-label" for="senha">Senha</label>
+                <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha"
+                    autocomplete="off">
+            </div>
 
-        <button id="login-button" type="button">Finalizar</button>
-    </form>
+            <button id="login-button" type="button">Finalizar</button>
+        </form>
 
-    <form id="register-box">
-        <h3>Registre-se</h3>
-        <div>
-            <label class="login-label" for="email">E-mail</label>
-            <input class="login-input" id="login-input" name="email" type="email" placeholder="Email">
-        </div>
-        <div>
-            <label class="login-label" for="senha">Senha</label>
-            <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha" autocomplete="off">
-        </div>
-        <div>
-            <label class="login-label" for="conf-senha">Senha</label>
-            <input class="login-input" id="conf-senha" name="confirmaSenha" type="password" placeholder="Confirma senha" autocomplete="off">
-        </div>
-        <div>
-            <label class="login-label" for="cpf">CPF</label>
-            <input class="login-input" id="cpf" name="cpf" type="text" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
-        </div>
-        
-        <label class="switch">
-            <input id="noticias" name="noticias" type="checkbox">
-            <span class="slider round"></span>
-        </label>
+        <form id="register-box">
+            <h3>Registre-se</h3>
+            <div>
+                <label class="login-label" for="email">E-mail</label>
+                <input class="login-input" id="login-input" name="email" type="email" placeholder="Email">
+            </div>
+            <div>
+                <label class="login-label" for="senha">Senha</label>
+                <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha"
+                    autocomplete="off">
+            </div>
+            <div>
+                <label class="login-label" for="conf-senha">Senha</label>
+                <input class="login-input" id="conf-senha" name="confirmaSenha" type="password"
+                    placeholder="Confirma senha" autocomplete="off">
+            </div>
+            <div>
+                <label class="login-label" for="cpf">CPF</label>
+                <input class="login-input" id="cpf" name="cpf" type="text" placeholder="CPF"
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+            </div>
 
-        <div style="display: absolute; margin: -20px; margin-left: 20px; box-sizing: border-box;">
-            <label class="login-label" for="noticias">Receber Noticias</label>
-        </div>
+            <label class="switch">
+                <input id="noticias" name="noticias" type="checkbox">
+                <span class="slider round"></span>
+            </label>
 
-        <button id="login-button" type="button">Finalizar</button>
-    </form>
-    
+            <div style="display: absolute; margin: -20px; margin-left: 20px; box-sizing: border-box;">
+                <label class="login-label" for="noticias">Receber Noticias</label>
+            </div>
+
+            <button id="login-button" type="button">Finalizar</button>
+        </form>
+    </main>
     <footer>
         <h3 class="contact-title">Contato e etc</h3>
     </footer>
 </body>
+
 </html>
