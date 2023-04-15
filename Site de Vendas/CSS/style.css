@@ -1,7 +1,9 @@
 :root {
-  --cinzaAzulado: rgb(219, 224, 236);
+  --cinzaAzulado: #dbe0ec;
   --azulEscuro: #363375;
-  --azulClaro: rgb(168, 176, 231);
+  --azulClaro: #a8b0e7;
+  --precoOriginal: #7681E2;
+  --precoHighlight: #4555E2;
 }
 body{
   padding: 0;
@@ -23,6 +25,7 @@ nav{
   border-radius: 0px 0px 50px 50px;
   position: sticky;
   top: 0;
+  z-index: 90;
 }
 nav ul {
   list-style: none;
@@ -82,6 +85,13 @@ color: var(--azulEscuro);
 padding: 10px;
 }
 
+.favorite{
+  background-color: rgba(255, 222, 173, 0);
+  border: 0px none ;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
 .produto{
 border: 0 none;
 border-radius: 25px;
@@ -104,20 +114,38 @@ margin-bottom: 0;
 }
 
 .precoOriginal{
-color: var(--azulClaro);
+color: var(--precoOriginal);
 text-decoration: line-through;
 text-align: left;
 padding-left: 10px;
 margin-bottom: 0;
+margin-top: 0;
 
 }
 
 .precoDesconto{
+color: var(--precoHighlight);
 text-align: left;
 padding-left: 10px;
 font-size: 1.2em;
 font-weight: bolder;
 margin-top: 0;
+margin: 0;
+}
+
+.freteGratis{
+  font-size: 0.9em;
+  font-weight: 100;
+  color: var(--precoHighlight);
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  margin: 0px;
+}
+
+.stars{
+  position: relative;
+  bottom: 7px;
 }
 
 .propaganda{
@@ -129,7 +157,7 @@ margin-top: 0;
   justify-content: center;
 }
 
-
+.simpleCarousel{}
 
 footer{
   color: white;
