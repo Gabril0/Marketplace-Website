@@ -11,14 +11,18 @@ body{
   background-color: var(--cinzaAzulado);
   overflow-x: hidden;
   font-family: sans-serif;
-
+  
 }
 header{
   width: 100%;
   color: white;
   background-color: var(--azulEscuro);
+  z-index: 100;
 }
 
+ul{
+  list-style-type: none;
+}
 nav{
   font-weight: bold;
   background-color: white;
@@ -47,6 +51,7 @@ width: 20%;
 nav ul li:hover{
 background-color: var(--cinzaAzulado);
 }
+
 nav ul li:hover ul{
 width: 100%;
 display: block;
@@ -56,6 +61,7 @@ nav ul li ul li:hover a{
 background-color: var(--azulEscuro);
 color: white;
 font-weight: bold;
+
 }
 nav ul li ul li:hover{
 background-color: var(--azulEscuro);
@@ -85,6 +91,49 @@ display: block;
 text-decoration: none;
 color: var(--azulEscuro);
 padding: 10px;
+}
+
+nav:hover + main .opacityEffect {
+  opacity: 1;
+  visibility: visible;
+}
+
+.topico{
+  color: var(--azulEscuro);
+  font-size: 2em;
+  font-weight: bolder;
+  margin-left: 3%;
+}
+
+.opcoesAvancadas{
+  display: inline-block;
+  background-color: white;
+  width: 20%;
+  border-radius: 10%;
+  padding: 0.2%;
+  margin-left: 0.5%;
+  top: 0;
+}
+
+.elemOpcAvancada{
+  display: inline-block;
+  position: relative;
+  right: -7%;
+  top: -210px;
+  width: 100%;
+}
+
+.opacityEffect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 22, 139, 0.274);
+  opacity: 0;
+  visibility:hidden;
+  transition: opacity 0.3s ease; 
+  z-index: 2;
 }
 
 .footerData{
@@ -131,7 +180,7 @@ color: var(--azulEscuro);
 text-align: left;
 font-size: 1.1em;
 overflow: hidden;
-margin-top: 0;
+margin-top: 1%;
 margin-bottom: 0;
 }
 
@@ -347,6 +396,25 @@ h3{
     display: inline-block;
 }
 
+#login-button {
+    scale: 1.2;
+    border-radius: 20px;
+    width: 130px;
+    height: 28px;
+    
+    background-color: #3b3b79;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+   
+    border: none;
+    margin-left: 35%;
+    margin-top: 20%;
+}
+
+#login-button:hover{
+    cursor: pointer;
+}
 .login-button {
     scale: 1.2;
     border-radius: 20px;
@@ -364,7 +432,7 @@ h3{
 }
 
 .login-button:hover{
-    cursor: pointer;;
+    cursor: pointer;
 }
 
 #login-box {
@@ -374,10 +442,10 @@ h3{
     box-sizing: border-box;
     
     padding: 30px;
-
-    position: absolute;
+    margin-top: 1%;
+    position: relative;
     top: 30%;
-    left: 25%;
+    left: 20%;
     border-radius: 20px;
 }
 
@@ -389,9 +457,9 @@ h3{
     
     padding: 30px;
 
-    position: absolute;
-    top: 25%;
-    left: 55%;
+    position: relative;
+    top: -450px;
+    left: 50%;
     border-radius: 20px;
 }
 
@@ -460,7 +528,10 @@ h3{
   }
 
   footer {
+    position:relative;
+    bottom: 0px;
     height: 200px;
+    width: 100%;
     margin-top: 40px;
     text-align: center;
     color: white;
@@ -490,8 +561,8 @@ h3{
     box-sizing: border-box;
     
     padding: 30px;
-
-    position: absolute;
+    margin-top: 1%;
+    position: relative;
     top: 20%;
     left: 20%;
     border-radius: 20px;
@@ -514,15 +585,13 @@ h3{
     background: white;
     width: 650px;
     height: 550px;
-    box-sizing: border-box;
-
+    box-sizing:border-box;
+    margin: 0;
     padding: 30px;
-
-    position: absolute;
-    top: 20%;
-    left: 45%;
+    position: relative;
+    top: -550px;
+    left: 43%;
     border-radius: 20px;
-
     padding: 40px;
   }
 
@@ -547,7 +616,7 @@ h3{
     transform: translate(-250px, -190px);
 }
 
-login-button:hover, .login-button:hover{
+.login-button:hover, #login-button:hover{
     border-width: 2.5px;
     border-style: solid;
     border-color:rgb(54, 51, 117);
@@ -567,7 +636,7 @@ a{
 
 .img_produto{
   left: 10%;
-  top: 100px;
+  top: -170px;
   width: 600px;
   height: 600px;
   background-color: white;
@@ -583,10 +652,11 @@ a{
 }
 
 .produtoSide{
-  left: 50%;
+  left: 15%;
   top: 33%;
+  margin-top: 2%;
   display: inline-block;
-  position: absolute;
+  position: relative;
   width: 750px;  
 }
 
@@ -601,7 +671,6 @@ a{
 
 .descricaoProduto{
   background-color: white;
-  height: 800px;
   width: 80%;
   margin: 0 auto;
   margin-top: 30px;
@@ -612,14 +681,15 @@ a{
   font-size: 30px;
   padding: 70px;
   font-weight: bold;
+  padding: 3%;
 }
 
 .respostaVendedor{
   background-color:  #363375;
   padding: 30px;
   width: 80%;
-  height: 100px;
   margin: 0 auto;
+  border-radius: 25px;
 }
 
 .respostaVendedor > p{
@@ -630,7 +700,7 @@ a{
 #adicionarCarrinho{
   height: 200px;
   width: 500px;
-  position: absolute;
-  transform: translate(-200px, -80px);
+  position: relative;
+  transform: translate(-200px, -33px);
   font-size: 30px;
 }
