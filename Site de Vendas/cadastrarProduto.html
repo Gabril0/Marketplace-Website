@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFU Marketplace</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-
-<body>
-    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -151,58 +139,55 @@
         </ul>
     </nav>
 
-
     <main>
         <div class="opacityEffect"></div>
-        <form id="login-box">
-            <h3>Login</h3>
+        <form class="novoAnuncio">
+            <h1 class="tituloNovoProduto nomeProduto">Anunciar novo produto</h1>
             <div>
-                <label class="login-label" for="email">E-mail</label>
-                <input class="login-input" id="login-input" name="email" email" type="text" placeholder="Email">
+                <label class="login-label" for="nome">Nome do produto</label>
+                <input class="login-input" type="text" id="nome" placeholder="Nome do produto">
             </div>
             <div>
-                <label class="login-label" for="senha">Senha</label>
-                <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha"
-                    autocomplete="off">
+                <label class="login-label" for="estadoProduto">Estado do produto</label>
+                <select class="check-input" name="estadoProduto" id="estadoProduto">
+                    <option value="Novo"">Novo</option>
+                    <option value="semiNovo"">Semi-novo</option>
+                    <option value="poucoUsado"">Pouco usado</option>
+                    <option value="muitoUsado"">Muito usado</option>
+                </select>
+            </div>
+            <div>
+                <label class=" login-label" for="cor">Cor (opcional)</label>
+                <input style="margin-left: 30px" class="login-input" type="text" id="cor" placeholder="cor">
+            </div>
+            <div>
+                <label class="login-label" for="quantidade">Quantidade</label>
+                <input style="margin-left: 50px" class="login-input" type="text" id="quantidade"
+                    placeholder="Quantidade">
             </div>
 
-            <button id="login-button" type="button">Finalizar</button>
-        </form>
-
-        <form id="register-box">
-            <h3>Registre-se</h3>
             <div>
-                <label class="login-label" for="email">E-mail</label>
-                <input class="login-input" id="login-input" name="email" type="email" placeholder="Email">
-            </div>
-            <div>
-                <label class="login-label" for="senha">Senha</label>
-                <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha"
-                    autocomplete="off">
-            </div>
-            <div>
-                <label class="login-label" for="conf-senha">Senha</label>
-                <input class="login-input" id="conf-senha" name="confirmaSenha" type="password"
-                    placeholder="Confirma senha" autocomplete="off">
-            </div>
-            <div>
-                <label class="login-label" for="cpf">CPF</label>
-                <input class="login-input" id="cpf" name="cpf" type="text" placeholder="CPF"
-                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                <label class="login-label" for="marca">Marca</label>
+                <input style="margin-left: 85px" class="login-input" type="text" id="marca" placeholder="Marca">
             </div>
 
-            <label class="switch">
-                <input id="noticias" name="noticias" type="checkbox">
-                <span class="slider round"></span>
-            </label>
-
-            <div style="display: absolute; margin: -20px; margin-left: 20px; box-sizing: border-box;">
-                <label class="login-label" for="noticias">Receber Noticias</label>
+            <div>
+                <label class="login-label" for="categoria">Categoria</label>
+                <input style="margin-left: 60px" class="login-input" type="text" id="categoria" placeholder="Categoria">
             </div>
 
-            <button id="login-button" type="button">Finalizar</button>
+            <div style="margin: 20px 10px 10px 0;">
+                <label class="login-label" for="imagens">Imagens</label>
+                <button style="position:absolute; top: 300px; left: 440px;" class="login-button" id="imagens">Enviar</button>
+            </div>
+
+            <textarea class="textArea" name="descricao" rows="11" cols="39" placeholder="Descrição ..."></textarea>
+        
+            <button style="margin: 0 0 0 250px; transform: translate(0px,-25px);" id="login-button" type="button">Finalizar</button>
+
         </form>
     </main>
+
     <footer>
         <table>
             <tr>
@@ -212,42 +197,42 @@
                 <th>Promoções</th>
                 <th>Minha Conta</th>
             </tr>
-            <tr >
+            <tr>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
             </tr>
-            <tr >
+            <tr>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
             </tr>
-            <tr >
+            <tr>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
             </tr>
-            <tr >
+            <tr>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
             </tr>
-            <tr >
+            <tr>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
             </tr>
-            <tr >
+            <tr>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>
                 <th class="footerData">Dados</th>

@@ -5,6 +5,12 @@
   --precoOriginal: #7681E2;
   --precoHighlight: #4555E2;
 }
+
+hr{
+  color: var(--azulEscuro);
+  border: 1px solid;
+  border-radius: 2px;
+}
 body{
   padding: 0;
   margin: 0;
@@ -171,7 +177,7 @@ padding: 0.2%;
 margin: 0.5%;
 }
 
-.produto:hover, .categoria:hover{
+.produto:hover, .categoria:hover, .adicionarProduto:hover{
   box-shadow: 0px 0px 15px var(--azulEscuro);
 }
 
@@ -317,7 +323,7 @@ filter: invert(18%) sepia(13%) saturate(6695%) hue-rotate(221deg) brightness(100
   border-radius: 25px;
 }
 
-.caixaBusca:focus{
+.caixaBusca:focus, .login-input:focus{
 outline: none;
 border: 0px none ;
 }
@@ -362,6 +368,127 @@ border: 0px none ;
   border-radius: 25px;
 }
 
+.adicionarProduto{
+  background-color: white;
+  display: inline-block;
+  padding: 2.8% 3.9%;
+  border-radius: 25px;
+  transform: translate(0px,-75px);
+  font-size: 8em;
+  color: var(--azulEscuro);
+}
+
+.carrinhoEndereco{
+  width: 50%;
+  height: 225px;
+  border-radius: 25px;
+  background-color: white;
+  position: relative;
+  right: -3%;
+  bottom: -18px;
+}
+
+.remover{
+  color: rgb(255, 0, 179);
+  background-color: #00000000;
+  font-weight: bolder;
+  border: 0 none;
+  font-size: 1.2em;
+  position: absolute;
+  right: 10px;
+}
+
+.remover:hover{
+  background-color: rgb(255, 0, 179);
+  color: white;
+  border-radius: 25px;
+}
+
+.resumoCompra{
+  background-color: white;
+  color: var(--azulEscuro);
+  position: relative;
+  width: 30%;
+  right: -58%;
+  top: -577px;
+  border-radius: 20px;
+  padding: 1%;
+  padding-left: 0%;
+  font-size: 1.3em;
+}
+
+.somaTotal{
+  border-collapse: separate;
+
+}
+
+.juros{
+  font-size: 0.8em;
+  position: absolute;
+  transform: translate(115px,-25px);
+}
+
+::placeholder{
+  color: var(--azulEscuro);
+
+}
+
+.totalCompra{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.enfaseTotal, .noPix{
+  color: var(--precoHighlight);
+  font-weight: bolder;
+}
+.noPix{
+  position: absolute;
+  transform: translate(330px,-80px);
+}
+
+.Pagamento{
+  width: 80%;
+  color: var(--azulEscuro);
+  background-color: white;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.tabelaPagamento{
+  text-align: center;
+  width: 100%;
+}
+
+.formaPagamento{
+  background-color: var(--azulEscuro);
+  border: 0 none;
+
+  border-radius: 25px;
+  padding: 10px;
+  color: white;
+  font-weight: bolder;
+}
+
+.formaPagamento:active{
+  color: var(--azulEscuro);
+  outline: 1px;
+  outline-color: var(--azulEscuro);
+  outline-style: solid;
+  background-color: white;
+}
+
+.agradecimento{
+  background-color: white;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 2%;
+  color: var(--azulEscuro);
+  font-weight: bold;
+  font-size: 2em;
+}
 
 h3{
   text-align: center;
@@ -637,8 +764,8 @@ a{
 .img_produto{
   left: 10%;
   top: -170px;
-  width: 600px;
-  height: 600px;
+  width: 20%;
+  height: 20%;
   background-color: white;
   display: inline-block;
 }
@@ -703,4 +830,50 @@ a{
   position: relative;
   transform: translate(-200px, -33px);
   font-size: 30px;
+}
+
+.novoAnuncio{
+  background-color: white;
+  box-sizing: border-box;
+  width: 700px;
+  height: 900px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.tituloNovoProduto{
+  padding: 30px 30px 20px 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.check-input{
+  display: inline-block;
+  box-sizing: border-box;
+
+  background: #dbe0ec;
+  padding: 10px 10px 10px 20px;
+  color: #3b3b79;
+
+  border-color: lightgray;
+  border: 1.5px solid lightgray;
+  height: 40px;
+  width: 20%;
+  margin: 10px 0 0 10px;
+
+  border-radius: 20px;
+}
+
+.textArea{
+  font-family: sans-serif;
+  resize: none;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 20px;
+  border-style: solid;
+  background-color: #dbe0ec;
+  color: #363375;
+  font-size: 20px;
 }
