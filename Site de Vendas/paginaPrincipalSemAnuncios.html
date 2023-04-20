@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFU Marketplace</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="JavaScript/script.js"></script>
 </head>
 
 <body>
@@ -139,70 +140,67 @@
         </ul>
     </nav>
 
-
     <main>
         <div class="opacityEffect"></div>
-        <form id="login-box">
-            <h3>Login</h3>
-            <div>
-                <label class="login-label" for="email">E-mail</label>
-                <input class="login-input" id="email" name="email" type="text" placeholder="Email">
-            </div>
-            <div>
-                <label class="login-label" for="senha">Senha</label>
-                <input class="login-input" id="senha" name="senha" type="password" placeholder="Senha"
-                    autocomplete="off">
-            </div>
+        <div class="simpleCarousel">
+            <button class="leftButton">&lt;</button>
+                <table>
+                    <tr>
+                        <td><img src="Images/testeCarousel.png" alt="Anúncios" width="1270" height="449"
+                                class="imagem1"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/testeCarousel2.png" alt="Anúncios2" width="1270" height="449"
+                                class="imagem2"></td>
+                    </tr>
+                </table>
+                    <button class="rightButton">&gt;</button>
+        </div>
 
-            <button id="login-button" type="button">Finalizar</button>
-        </form>
+        <div class="categorias">
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
+            <a href="" class="categoria">
+                <h2 class="nomeCategoria">Nome Categoria</h2>
+                <img src="Images/logoUFU.png" alt="Imagem categoria" width="140" height="140">
+            </a>
 
-        <form id="register-box">
-            <h3>Registre-se</h3>
-            <div>
-                <label class="login-label" for="email">E-mail</label>
-                <input class="login-input" id="ab" name="email" type="email" placeholder="Email">
-            </div>
-            <div>
-                <label class="login-label" for="senha">Senha</label>
-                <input class="login-input" id="abc" name="senha" type="password" placeholder="Senha"
-                    autocomplete="off">
-            </div>
-            <div>
-                <label class="login-label" for="conf-senha">Senha</label>
-                <input class="login-input" id="conf-senha" name="confirmaSenha" type="password"
-                    placeholder="Confirma senha" autocomplete="off">
-            </div>
-            <div>
-                <label class="login-label" for="cpf">CPF</label>
-                <input class="login-input" id="cpf" name="cpf" type="text" placeholder="CPF"
-                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
-            </div>
+        </div>
 
-            <label class="switch">
-                <input id="noticias" name="noticias" type="checkbox">
-                <span class="slider round"></span>
-            </label>
+        <div class="propaganda">
+            Propaganda da loja
+        </div>
 
-            <div style="position: absolute; margin: -20px; margin-left: 20px; box-sizing: border-box;">
-
-                <label class="login-label" for="noticias">Receber Noticias</label>
-            </div>
-
-            <button style="    scale: 1.2;
-            border-radius: 20px;
-            width: 130px;
-            height: 28px;
-            
-            background-color: #3b3b79;
-            color: white;
-            font-size: 17px;
-            font-weight: bold;
-           
-            border: none;
-            margin-left: 35%;
-            margin-top: 20%;" type="button">Finalizar</button>
-        </form>
     </main>
     <footer>
         <table>
