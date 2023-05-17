@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <a href="index.html">
+        <a href="../index.html">
             <div  class="botaoLogo">
 
                 <img src="../Images/logoUFU.png" alt="logo" width="70" height="70">
@@ -143,7 +143,7 @@
 
     <main>
         <div class="opacityEffect"></div>
-        <form class="novoAnuncio">
+        <form class="novoAnuncio" action="../php/cadastroProduto.php">
             <h1 class="tituloNovoProduto nomeProduto">Anunciar novo produto</h1>
             <div>
                 <label class="login-label" for="nome">Nome do produto</label>
@@ -153,29 +153,40 @@
                 <label class="login-label" for="estadoProduto">Estado do produto</label>
                 <select class="check-input" name="estadoProduto" id="estadoProduto">
                     <option value="Novo">Novo</option>
-                    <option value="semiNovo">Semi-novo</option>
+                    <option value="Semi-novo">Semi-novo</option>
                     <option value="poucoUsado">Pouco usado</option>
                     <option value="muitoUsado">Muito usado</option>
                 </select>
             </div>
             <div>
-                <label class=" login-label" for="cor">Cor (opcional)</label>
-                <input style="margin-left: 30px" class="login-input" type="text" id="cor" placeholder="cor">
+                <label class=" login-label" for="Preco">Preco</label>
+                <input style="margin-left: 30px" class="login-input" type="text" id="Preco" placeholder="Preço">
             </div>
             <div>
-                <label class="login-label" for="quantidade">Quantidade</label>
-                <input style="margin-left: 50px" class="login-input" type="text" id="quantidade"
-                    placeholder="Quantidade">
+                <label class="login-label" for="cep">CEP</label>
+                <input style="margin-left: 50px" class="login-input" type="text" id="cep"
+                    placeholder="CEP">
             </div>
 
             <div>
-                <label class="login-label" for="marca">Marca</label>
-                <input style="margin-left: 85px" class="login-input" type="text" id="marca" placeholder="Marca">
+                <label class="login-label" for="bairro">Bairro</label>
+                <input style="margin-left: 85px" class="login-input" type="text" id="bairro" placeholder="Bairro">
+            </div>
+            <div>
+                <label class="login-label" for="cidade">Cidade</label>
+                <input style="margin-left: 85px" class="login-input" type="text" id="cidade" placeholder="Cidade">
             </div>
 
             <div>
                 <label class="login-label" for="categoria">Categoria</label>
-                <input style="margin-left: 60px" class="login-input" type="text" id="categoria" placeholder="Categoria">
+                <select class="check-input" name="estadoProduto" id="estadoProduto">
+                    <option value="Outro">Outro</option>
+                    <option value="Veiculo">Veículo</option>
+                    <option value="Eletronico">Eletrônico</option>
+                    <option value="Imovel">Imóvel</option>
+                    <option value="Movel">Móvel</option>
+                    <option value="Vestuario">Vestuário</option>
+                </select>
             </div>
 
             <div style="margin: 20px 10px 10px 0;">
@@ -185,7 +196,7 @@
 
             <textarea class="textArea" name="descricao" rows="11" cols="39" placeholder="Descrição ..."></textarea>
         
-            <button style="margin: 0 0 0 250px; transform: translate(0px,-25px);" id="login-button" type="button">Finalizar</button>
+            <button style="margin: 0 0 0 250px; transform: translate(0px,-25px);" id="login-button" type="submit">Finalizar</button>
 
         </form>
     </main>

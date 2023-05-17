@@ -1,0 +1,4 @@
+INSERT INTO Categoria (codigo, nome, descricao) VALUES (1, "Veiculo", "Veiculos de todos os tipos")
+INSERT INTO Categoria (codigo, nome, descricao) VALUES (2, "Eletroeletronico", "Eletroeletronicos de todos os tipos")
+INSERT INTO Categoria (codigo, nome, descricao) VALUES (3, "Imóvel", "Imoveis de todos os tipos")
+INSERT INTO Categoria (codigo, nome, descricao) VALUES (4, "Vestuario", "Itens de Vestuario de todos os tipos")

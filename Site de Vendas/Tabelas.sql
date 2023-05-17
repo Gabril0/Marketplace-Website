@@ -1,51 +1,53 @@
 CREATE TABLE Anunciante (
-  codigo int PRIMARY KEY,
-  nome varchar(255),
-  email varchar(255),
-  senhaHash varchar(255),
-  telefone varchar(255)
-)ENGINE=InnoDB;
+  codigo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  nome VARCHAR(255),
+  email VARCHAR(255),
+  senhaHash VARCHAR(255),
+  telefone VARCHAR(255)
+) ENGINE=InnoDB;
 
 CREATE TABLE Enderecos (
-  cep varchar(255) PRIMARY KEY,
-  bairro varchar(255),
-  cidade varchar(255),
-  estado varchar(255)
-)ENGINE=InnoDB;
-
-CREATE TABLE Anuncio (
-  codigo int PRIMARY KEY,
-  titulo varchar(255),
-  descricao varchar(255),
-  preco int,
-  dataHora date,
-  cep varchar(255),
-  bairro varchar(255),
-  cidade varchar(255),
-  estado varchar(255),
-  codCategoria varchar(255),
-  FOREIGN KEY (codCategoria) REFERENCES Categoria (codigo),
-  codAnunciante varchar(255),
-  FOREIGN KEY (codAnunciante) REFERENCES Anunciante (codigo)
-)ENGINE=InnoDB;
+  cep VARCHAR(255) PRIMARY KEY,
+  bairro VARCHAR(255),
+  cidade VARCHAR(255),
+  estado VARCHAR(255)
+) ENGINE=InnoDB;
 
 CREATE TABLE Categoria (
-  codigo int PRIMARY KEY,
-  nome varchar(255),
-  descricao int
-)ENGINE=InnoDB;
+  codigo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  nome VARCHAR(255),
+  descricao INT
+) ENGINE=InnoDB;
+
+CREATE TABLE Anuncio (
+  codigo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  titulo VARCHAR(255),
+  descricao VARCHAR(255),
+  preco INT,
+  dataHora DATE,
+  cep VARCHAR(255),
+  bairro VARCHAR(255),
+  cidade VARCHAR(255),
+  estado VARCHAR(255),
+  codCategoria INT, 
+  FOREIGN KEY (codCategoria) REFERENCES Categoria (codigo),
+  codAnunciante INT,
+  FOREIGN KEY (codAnunciante) REFERENCES Anunciante (codigo)
+) ENGINE=InnoDB;
+
+
 
 CREATE TABLE Interesse (
-  codigo int PRIMARY KEY,
-  mensagem varchar(255),
-  dataHora date,
-  contato varchar(255),
-  codAnunciante int,
+  codigo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  mensagem VARCHAR(255),
+  dataHora DATE,
+  contato VARCHAR(255),
+  codAnunciante INT,
   FOREIGN KEY (codAnunciante) REFERENCES Anuncio (codigo)
-)ENGINE=InnoDB;
+) ENGINE=InnoDB;
 
 CREATE TABLE Foto (
-  codAnunciante int,
-  nomeArqFoto varchar(255),
+  codAnunciante INT,
+  nomeArqFoto VARCHAR(255),
   FOREIGN KEY (codAnunciante) REFERENCES Anunciante (codigo)
-)ENGINE=InnoDB;
+) ENGINE=InnoDB;

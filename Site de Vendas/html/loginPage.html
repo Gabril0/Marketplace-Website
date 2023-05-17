@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <a href="index.html">
+        <a href="../index.html">
             <div  class="botaoLogo">
 
                 <img src="../Images/logoUFU.png" alt="logo" width="70" height="70">
@@ -143,7 +143,7 @@
 
     <main>
         <div class="opacityEffect"></div>
-        <form id="login-box">
+        <form id="login-box" action="../php/signIn.php" method="post">
             <h3>Login</h3>
             <div>
                 <label class="login-label" for="email">E-mail</label>
@@ -155,19 +155,19 @@
                     autocomplete="off">
             </div>
 
-            <button id="login-button" type="button">Finalizar</button>
+            <button id="login-button" type="submit">Finalizar</button>
         </form>
 
-        <form id="register-box">
+        <form id="register-box" action="../php/signUp.php" method="post">
             <h3>Registre-se</h3>
+            <div>
+                <label class="login-label" for="nome">Nome</label>
+                <input class="login-input" id="abc" name="nome" type="text" placeholder="nome"
+                    autocomplete="off">
+            </div>
             <div>
                 <label class="login-label" for="email">E-mail</label>
                 <input class="login-input" id="ab" name="email" type="email" placeholder="Email">
-            </div>
-            <div>
-                <label class="login-label" for="senha">Senha</label>
-                <input class="login-input" id="abc" name="senha" type="password" placeholder="Senha"
-                    autocomplete="off">
             </div>
             <div>
                 <label class="login-label" for="conf-senha">Senha</label>
@@ -175,9 +175,8 @@
                     placeholder="Confirma senha" autocomplete="off">
             </div>
             <div>
-                <label class="login-label" for="cpf">CPF</label>
-                <input class="login-input" id="cpf" name="cpf" type="text" placeholder="CPF"
-                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                <label class="login-label" for="telefone">Telefone</label>
+                <input class="login-input" id="telefone" name="telefone" type="text" placeholder="telefone">
             </div>
 
             <label class="switch">
@@ -190,19 +189,7 @@
                 <label class="login-label" for="noticias">Receber Noticias</label>
             </div>
 
-            <button style="    scale: 1.2;
-            border-radius: 20px;
-            width: 130px;
-            height: 28px;
-            
-            background-color: #3b3b79;
-            color: white;
-            font-size: 17px;
-            font-weight: bold;
-           
-            border: none;
-            margin-left: 35%;
-            margin-top: 20%;" type="button">Finalizar</button>
+            <button id='login-button' type="submit">Finalizar</button>
         </form>
     </main>
     <footer>

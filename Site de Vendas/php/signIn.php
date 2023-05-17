@@ -1,4 +1,5 @@
 <?php
+        session_start();
         require "conexaoMysql.php";
         $database = mysqlConnect();
     
@@ -10,23 +11,25 @@
             $database->beginTransaction();
     
             $query = <<<SQL
-            SELECT senhaHash
+            SELECT codigo, senhaHash
             FROM Anunciante 
             WHERE email = ?
             SQL;
     
             $stmt = $database->prepare($query);
-            if (!$stmt->execute([$email]));
+            if (!$stmt->execute([$email]))
                 throw new Exception('Falha na query');
             
-            $row = $stmt->fetch();
-
-            $_SESSION = password_verify($senha, $row['$senhaHash']);
-
-            return $_SESSION;
-    
-            
             $database->commit();
+            
+            $row = $stmt->fetch();   
+
+            $_SESSION['isLogged'] = password_verify($senha, $row['$senhaHash']);
+            $_SESSION['codAnunciante'] = $row['codigo'];
+    
+            if($_SESSION['isLogged'])
+                header("location: ../html/perfilPage.html");
+
         }catch(Exception $e) {
             $database->rollBack();
             exit("Falha ao cadastrar anunciante");
