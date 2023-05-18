@@ -1,6 +1,6 @@
 function isLoggedIn() {
   let xhr = new XMLHttpRequest();
-  xhr.open("GET", "../php/isLogged", true)
+  xhr.open("GET", "php/isLogged", true)
   xhr.responseType = "json"
   
   //verifica se algum header icon foi clicado
