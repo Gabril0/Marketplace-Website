@@ -274,8 +274,8 @@ margin: 0;
 }
 
 .botaoLogo{
-width: 3.7%;
-padding: 5px 20px;
+width: 70px;
+padding: 1% 1%;
 background-color: white;
 border: 0px none;
 border-radius: 25px;
@@ -303,7 +303,7 @@ border: 0px none;
 }
 .busca{
   position: absolute;
-  top: 10px;
+  top: 30px;
   left: 200px;
 }
 
@@ -547,7 +547,6 @@ h3{
     cursor: pointer;
 }
 .login-button {
-    padding: 10px;
     scale: 1.2;
     border-radius: 20px;
     background-color: #3b3b79;
@@ -902,9 +901,17 @@ a{
 .table90{
   width: 90%;
 }
+.table50{
+  width: 50%;
+}
 
-.paddingL300{
-  padding-left: 300px;
+.center80{
+  margin: 0 auto;
+  width: 80%;
+}
+.center60{
+  margin: 0 auto;
+  width: 60%;
 }
 .paddingL240{
   padding-left: 240px;
