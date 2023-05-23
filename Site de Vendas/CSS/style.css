@@ -237,9 +237,6 @@ margin: 0;
 }
 
 .categorias{
-  position: relative;
-  left: 16%;
-  margin-top: 1%;
   width: 90%;
   display: block;
 
@@ -335,7 +332,7 @@ filter: invert(18%) sepia(13%) saturate(6695%) hue-rotate(221deg) brightness(100
   border-radius: 25px;
 }
 
-.caixaBusca:focus, .login-input:focus{
+.caixaBusca:focus, .-input:focus{
 outline: none;
 border: 0px none ;
 }
@@ -383,9 +380,10 @@ border: 0px none ;
 .adicionarProduto{
   background-color: white;
   display: inline-block;
-  padding: 4.2% 5.8%;
+  width: 220px;
+  text-align: center;
+  padding: 0.2%;
   border-radius: 25px;
-  transform: translate(0px,-75px);
   font-size: 8em;
   color: var(--azulEscuro);
 }
@@ -719,10 +717,6 @@ input[type="file"] {
     box-sizing: border-box;
     
     padding: 30px;
-    margin-top: 1%;
-    position: relative;
-    top: 20%;
-    left: 20%;
     border-radius: 20px;
   }
 
@@ -746,9 +740,8 @@ input[type="file"] {
     box-sizing:border-box;
     margin: 0;
     padding: 30px;
-    position: relative;
-    top: -550px;
-    left: 43%;
+
+
     border-radius: 20px;
     padding: 40px;
   }
@@ -765,16 +758,6 @@ input[type="file"] {
     color: var(--azulEscuro);
   }
 
-  #config-switch{
-    margin-top: 17px;
-    transform: translate(100px, -170px);
-}
-
-.upload-button {
-    position: absolute;
-    transform: translate(-250px, -190px);
-}
-
 .login-button:hover, #login-button:hover{
     border-width: 2.5px;
     border-style: solid;
@@ -782,6 +765,7 @@ input[type="file"] {
     background: white;
     color: rgb(54, 51, 117);
 }
+
 
 a{
     text-decoration: none;
@@ -794,8 +778,7 @@ a{
 }
 
 .img_produto{
-  left: 10%;
-  top: -170px;
+
   width: 20%;
   height: 20%;
   background-color: white;
@@ -859,8 +842,6 @@ a{
 #adicionarCarrinho{
   height: 200px;
   width: 500px;
-  position: relative;
-  transform: translate(-200px, -33px);
   font-size: 30px;
 }
 
@@ -907,4 +888,35 @@ a{
   background-color: #dbe0ec;
   color: #363375;
   font-size: 20px;
+}
+
+.uploadCentralizeProfile{
+  padding-top: 200px;
+  padding-left: 225px;
+}
+
+.table100{
+  width: 100%;
+}
+
+.table90{
+  width: 90%;
+}
+
+.paddingL300{
+  padding-left: 300px;
+}
+.paddingL240{
+  padding-left: 240px;
+}
+.paddingL120{
+  padding-left: 120px;
+}
+
+.paddingT5{
+  padding-top: 5px;
+}
+.produtoContainer{
+  width: 600px;
+  height: 600px;
 }
