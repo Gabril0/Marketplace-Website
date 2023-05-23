@@ -11,6 +11,26 @@
 </head>
 
 <body>
+    <script>
+        let input = document.getElementsByClassName("caixaBusca");
+
+        let string = input.value;
+        let array = string.split(" ");
+        let sendArray;
+
+        for(let i = 0; i < 5; i++){
+            sendArray[i] = array[i]
+        }
+
+        let options = {
+            method: post,
+            body: sendArray
+        }
+
+        fetch("php/getproduct.php", options);
+            window.location = "busca.html"
+
+    </script>
     <header>
         <a href="index.html">
             <div class="botaoLogo">

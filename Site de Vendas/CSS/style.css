@@ -176,6 +176,7 @@ table{
 }
 
 .produto{
+visibility: hidden;
 display: inline-block;
 border: 0 none;
 border-radius: 25px;
