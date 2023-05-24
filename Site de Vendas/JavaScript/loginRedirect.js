@@ -1,4 +1,4 @@
-function isLoggedIn() {
+function log() {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "php/isLogged", true)
   xhr.responseType = "json"
