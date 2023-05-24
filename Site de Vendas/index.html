@@ -12,23 +12,30 @@
 
 <body>
     <script>
-        let input = document.getElementsByClassName("caixaBusca");
+        function search() {
+            let input = document.getElementsByClassName("caixaBusca");
 
-        let string = input.value;
-        let array = string.split(" ");
-        let sendArray;
+            let string = input.value;
+            let array = string.split(" ");
+            let sendArray;
 
-        for(let i = 0; i < 5; i++){
-            sendArray[i] = array[i]
-        }
+            for (let i = 0; i < 5; i++) {
+                sendArray[i] = array[i]
+            }
 
-        let options = {
-            method: post,
-            body: sendArray
-        }
+            let options = {
+                method: post,
+                body: sendArray
+            }
 
-        fetch("php/getproduct.php", options);
+            fetch("php/getproduct.php", options);
             window.location = "busca.html"
+        }
+
+        document.onload = function (){
+            let botaoBusca = document.getElementsByClassName("botaoBusca")
+            botaoBusca.innerChild.addEventListener("click", search);
+        }
 
     </script>
     <header>

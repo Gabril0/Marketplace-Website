@@ -1,5 +1,7 @@
 <?php
-    require "conexaoMysql.php";
+    session_start();
+
+    require "../conexaoMysql.php";
     $database = mysqlConnect();
 
     $nome = $_POST["nome"] ?? "";
@@ -24,7 +26,10 @@
 
         
         $database->commit();
-        
+
+        $row1 = $stmt->fetch();
+        $_SESSION['emailAnunciante'] = $row1['email'];
+
         $queryCodAnunciante = <<<SQL
             SELECT codigo
             FROM Anunciante
@@ -37,10 +42,11 @@
 
         $row = $stmt->fetch();
         
-        $_SESSION['isLogged'] = true;
         $_SESSION['codAnunciante'] = $row['codigo'];
 
-        header("location: ../html/perfilPage.html"); 
+        if(!isset($_SESSION['emailUsuario'], $_SESSION['loginString']))
+            header("Location: ../html/perfilPage.html");
+
 
     }catch(Exception $e) {
         $database->rollBack();

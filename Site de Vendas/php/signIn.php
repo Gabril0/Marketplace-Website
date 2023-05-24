@@ -1,6 +1,6 @@
 <?php
+        require "../conexaoMysql.php";
         session_start();
-        require "conexaoMysql.php";
         $database = mysqlConnect();
     
         $email = $_POST["email"] ?? "";
@@ -11,7 +11,7 @@
             $database->beginTransaction();
     
             $query = <<<SQL
-            SELECT codigo, senhaHash
+            SELECT codigo, senhaHash, email
             FROM Anunciante 
             WHERE email = ?
             SQL;
@@ -23,12 +23,14 @@
             $database->commit();
             
             $row = $stmt->fetch();   
-
-            $_SESSION['isLogged'] = password_verify($senha, $row['$senhaHash']);
-            $_SESSION['codAnunciante'] = $row['codigo'];
+            if(password_verify($senha, $row['$senhaHash'])){
+                $_SESSION['emailAnunciante'] = $row['email'];
+                $_SESSION['codAnunciante'] = $row['codigo'];
     
-            if($_SESSION['isLogged'])
-                header("location: ../html/perfilPage.html");
+            }
+    
+            if(!isset($_SESSION['emailUsuario'], $_SESSION['loginString']))
+                header("Location: ../html/perfilPage.html");
 
         }catch(Exception $e) {
             $database->rollBack();

@@ -36,7 +36,7 @@ class Produto{
         descricao like ?
     SQL;
 
-    $stmt = $database->prepare($query)
+    $stmt = $database->prepare($query);
     if (!$stmt->execute(["%" . $palavrasChave[0] . "%", "%" . $palavrasChave[1] . "%", "%" . $palavrasChave[2] . "%", "%" . $palavrasChave[3] . "%", "%" . $palavrasChave[4] . "%"]));
         throw new Exception('Falha de inserção de produto');
 
