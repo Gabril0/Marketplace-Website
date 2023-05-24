@@ -1,7 +1,7 @@
 <?php
-session_start();
-
-$isLogged = isset($_SESSION['isLogged']);
-
-echo json_encode($isLogged);
+    session_start();
+    
+    if(!isset($_SESSION['emailAnunciante'] && isset($_SESSION['codAnunciante']))){
+        header("location: html/loginPage.html" )
+    }
 ?>
