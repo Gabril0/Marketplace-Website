@@ -138,28 +138,28 @@
 
     <main>
         <div class="opacityEffect"></div>
-        <table style="padding-left: 20%; padding-right: 15%;">
+        <table class="pl20pr15">
             <tr>
                 <td>
                     <form id="login-box" action="../php/signIn.php" method="post">
-                        <ul style="list-style-type: none; text-align: center; padding: 0;">
+                        <ul class="loginList">
                             <li>
                                 <h3>Login</h3>
                             </li>
-                            <li style="padding-top: 20px;">
+                            <li class="paddingT20">
                                 <div>
                                     <label class="login-label" for="email">E-mail</label>
                                     <input class="login-input" id="email" name="email" type="text" placeholder="Email">
                                 </div>
                             </li>
-                            <li style="padding-top: 20px;">
+                            <li class="paddingT20">
                                 <div>
                                     <label class="login-label" for="senha">Senha</label>
                                     <input class="login-input" id="senha" name="senha" type="password"
                                         placeholder="Senha" autocomplete="off">
                                 </div>
                             </li>
-                            <li style="padding-top: 40px;">
+                            <li class="paddingT40">
                                 <button id="login-button" type="submit">Finalizar</button>
                             </li>
                         </ul>
@@ -168,44 +168,44 @@
                 <td>
                     <form id="register-box" action="../php/signUp.php" method="post">
                         <h3>Registre-se</h3>
-                        <table style="text-align: center;">
-                            <tr style="padding-top: 40px;">
-                                <td>
+                        <table class="textCenter">
+                            <tr class="paddingT40">
+                                <td >
                                     <label class="login-label" for="nome">Nome</label>
                                 </td>
-                                <td style="width: 100%;">
+                                <td  class="width100percent">
                                     <input class="login-input" id="abc" name="nome" type="text" placeholder="Nome"
                                         autocomplete="off">
                                 </td>
                             </tr>
-                            <tr style="padding-top: 40px;">
+                            <tr class="paddingT40">
                                 <td>
                                     <label class="login-label" for="email">E-mail</label>
                                 </td>
-                                <td style="width: 100%; ">
+                                <td class="width100percent">
                                     <input class="login-input" id="ab" name="email" type="email" placeholder="Email">
                                 </td>
                             </tr>
-                            <tr style="padding-top: 40px;">
+                            <tr class="paddingT40">
                                 <td>
                                     <label class="login-label" for="conf-senha">Senha</label>
                                 </td>
-                                <td style="width: 100%;">
+                                <td class="width100percent">
                                     <input class="login-input" id="conf-senha" name="confirmaSenha" type="password"
                                         placeholder="Confirma senha" autocomplete="off">
                                 </td>
                             </tr>
-                            <tr style="padding-top:20px; padding-bottom: 40px;">
+                            <tr class="paddingT20B40">
                                 <td>
                                     <label class="login-label" for="telefone">Telefone</label>
                                 </td>
-                                <td style="width: 100%; ">
+                                <td class="width100percent">
                                     <input class="login-input" id="telefone" name="telefone" type="text"
                                         placeholder="Telefone">
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" style="text-align: center; padding-top: 40px;">
+                                <td colspan="2" class="textCenter paddingT40">
                                     <button id='login-button' type="submit">Finalizar</button>
                                 </td>
                             </tr>
