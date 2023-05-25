@@ -1044,7 +1044,6 @@ a{
 
 
 ::-webkit-scrollbar {
-  padding-top: 100px;
   width: 10px;
   background-color: var(--cinzaAzulado);
   border-radius: 25px;
