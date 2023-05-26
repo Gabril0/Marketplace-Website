@@ -16,15 +16,15 @@ CREATE TABLE Enderecos (
 CREATE TABLE Categoria (
   codigo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   nome VARCHAR(255),
-  descricao INT
+  descricao VARCHAR(255)
 ) ENGINE=InnoDB;
 
 CREATE TABLE Anuncio (
   codigo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   titulo VARCHAR(255),
   descricao VARCHAR(255),
-  preco INT,
-  dataHora DATE,
+  preco VARCHAR(255),
+  dataHora VARCHAR(255),
   cep VARCHAR(255),
   bairro VARCHAR(255),
   cidade VARCHAR(255),
@@ -40,7 +40,7 @@ CREATE TABLE Anuncio (
 CREATE TABLE Interesse (
   codigo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   mensagem VARCHAR(255),
-  dataHora DATE,
+  dataHora VARCHAR(255),
   contato VARCHAR(255),
   codAnunciante INT,
   FOREIGN KEY (codAnunciante) REFERENCES Anuncio (codigo)

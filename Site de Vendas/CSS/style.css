@@ -275,8 +275,8 @@ margin: 0;
 }
 
 .botaoLogo{
-width: 3.7%;
-padding: 5px 20px;
+width: 70px;
+padding: 1% 1%;
 background-color: white;
 border: 0px none;
 border-radius: 25px;
@@ -304,7 +304,7 @@ border: 0px none;
 }
 .busca{
   position: absolute;
-  top: 10px;
+  top: 30px;
   left: 200px;
 }
 
@@ -548,7 +548,6 @@ h3{
     cursor: pointer;
 }
 .login-button {
-    padding: 10px;
     scale: 1.2;
     border-radius: 20px;
     background-color: #3b3b79;
@@ -790,10 +789,6 @@ a{
   font-size: 100px;
 }
 
-#produtoSide > p{
-  font-size: 90px;
-}
-
 .produtoSide{
   left: 15%;
   top: 33%;
@@ -818,12 +813,12 @@ a{
   margin: 0 auto;
   margin-top: 30px;
   border-radius: 30px;
+  padding: 30px;
 }
 
 .descricaoProduto > p{
   font-size: 30px;
   padding: 70px;
-  font-weight: bold;
   padding: 3%;
 }
 
@@ -833,6 +828,7 @@ a{
   width: 80%;
   margin: 0 auto;
   border-radius: 25px;
+  overflow: auto;
 }
 
 .respostaVendedor > p{
@@ -903,9 +899,17 @@ a{
 .table90{
   width: 90%;
 }
+.table50{
+  width: 50%;
+}
 
-.paddingL300{
-  padding-left: 300px;
+.center80{
+  margin: 0 auto;
+  width: 80%;
+}
+.center60{
+  margin: 0 auto;
+  width: 60%;
 }
 .paddingL240{
   padding-left: 240px;
@@ -920,4 +924,139 @@ a{
 .produtoContainer{
   width: 600px;
   height: 600px;
+}
+
+.pl3pr11{
+  padding-left: 3%;
+  padding-right: 11%;
+}
+.pl15pr15{
+  padding-left: 15%; 
+  padding-right: 15%;
+}
+.pl20pr15{
+  padding-left: 20%; 
+  padding-right: 15%;
+}
+
+.tdVerticalCenter{
+  vertical-align: top;
+}
+
+.checkBoxFix{
+  position: relative;
+  top:-50px;
+}
+
+.height50{
+  height: 50px;
+}
+
+.paddingL15percent{
+  padding-left: 15%;
+}
+.paddingL13percent{
+  padding-left: 13%;
+}
+
+.inline{
+  display: inline;
+}
+.padding2percent{
+  padding: 2%;
+}
+
+.loginList{
+  list-style-type: none;
+  text-align: center; 
+  padding: 0;
+}
+
+.paddingT20{
+  padding-top: 20px;
+}
+.paddingT40{
+  padding-top: 40px;
+}
+.paddingT20B40{
+  padding-top:20px; 
+  padding-bottom: 40px;
+}
+
+.textCenter{
+  text-align: center;
+}
+
+.width100percent{
+  width: 100%;
+}
+
+.allignFinalizar{
+  position: relative; 
+  top: -3px; 
+  right: 13%;
+   padding: 8px;
+}
+
+.nomeProdutoLocation{
+  font-size: 35px; 
+  position: relative;
+  left: 10.5%; top: 22%
+}
+
+.top20percentR{
+  position: relative; 
+  top: 20%;
+}
+
+.nomeProdutoFix{
+  color: var(--azulEscuro);
+  text-align: left;
+  overflow: hidden;
+  margin-top: 1%;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.precoOriginalPlacement{
+  font-size: 25px;
+  margin-top: 2%;
+  font-weight: bold;
+  padding-right: 2%;
+}
+
+.precoDescontoPlacement{
+  margin-top: 0;
+  padding-left: 2%;
+}
+
+.fontSize2em{
+  font-size: 2em;
+}
+.fontSize3em{
+  font-size: 3em;
+}
+
+.vendedorHighlight{
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--cinzaAzulado);
+  border-radius: 25px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--azulClaro);
+  border-radius: 25px; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5a5aa9; 
+  border-radius: 25px;
 }
