@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFU Marketplace</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <script src="../JavaScript/script.js"></script>
-    <script src="../JavaScript/loginRedirect.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JavaScript/script.js"></script>
+    <script src="JavaScript/loginPage.js"></script>
 </head>
 
 <body>
     <header>
-        <a href="../index.html">
+        <a href="index.html">
             <div class="botaoLogo">
 
-                <img src="../Images/logoUFU.png" alt="logo" width="70" height="70">
+                <img src="Images/logoUFU.png" alt="logo" width="70" height="70">
             </div>
         </a>
         <div class="busca">
             <input type="text" class="caixaBusca">
             <a href="busca.html">
                 <div class="botaoBusca">
-                    <img src="../Images/search.svg" width="42" height="42" alt="Botao de busca">
+                    <img src="Images/search.svg" width="42" height="42" alt="Botao de busca">
                 </div>
             </a>
         </div>
@@ -136,83 +136,82 @@
         </ul>
     </nav>
 
+
     <main>
         <div class="opacityEffect"></div>
-        <table>
-            <tr >
-                <td class="paddingL240">
-                    <div id="config-board" >
-                        <div class="container-image">
-                            <img id="avatar" class="avatar" alt="avatar" src="../resources/avatar.svg">
-                        </div>
-                        <ul class="configs">
-                            <li class="item-config"><a href="">Informações cadastrais</a></li>
-                            <li class="item-config"><a href="">Dados do endereço</a></li>
-                            <li class="item-config"><a href="">Configurações de notificação</a></li>
-                            <li class="item-config"><a href="">Pedidos</a></li>
-                            <li class="item-config"><a href="">Dúvidas</a></li>
-                        </ul>
-                    </div>
-                </td>
-
+        <table class="pl20pr15">
+            <tr>
                 <td>
-
-                    <div id="config-menu">
-                        <table>
-                            <tr>
-                              <td>
-                                <label class="login-label" for="nome">Nome</label>
-                              </td>
-                              <td class="table100">
-                                <input class="login-input" type="text" id="nome" placeholder="Nome">
-                              </td>
+                    <form id="login-box" action="php/signIn.php" method="post">
+                        <ul class="loginList">
+                            <li>
+                                <h3>Login</h3>
+                            </li>
+                            <li class="paddingT20">
+                                <div>
+                                    <label class="login-label" for="email">E-mail</label>
+                                    <input class="login-input" id="email" name="email" type="text" placeholder="Email">
+                                </div>
+                            </li>
+                            <li class="paddingT20">
+                                <div>
+                                    <label class="login-label" for="senha">Senha</label>
+                                    <input class="login-input" id="senha" name="senha" type="password"
+                                        placeholder="Senha" autocomplete="off">
+                                </div>
+                            </li>
+                            <li class="paddingT40">
+                                <button id="login-button" type="submit">Finalizar</button>
+                            </li>
+                        </ul>
+                    </form>
+                </td>
+                <td>
+                    <form id="register-box" action="php/signUp.php" method="post">
+                        <h3>Registre-se</h3>
+                        <table class="textCenter">
+                            <tr class="paddingT40">
+                                <td >
+                                    <label class="login-label" for="nome">Nome</label>
+                                </td>
+                                <td  class="width100percent">
+                                    <input class="login-input" id="abc" name="nome" type="text" placeholder="Nome"
+                                        autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr class="paddingT40">
+                                <td>
+                                    <label class="login-label" for="email">E-mail</label>
+                                </td>
+                                <td class="width100percent">
+                                    <input class="login-input" id="ab" name="email" type="email" placeholder="Email">
+                                </td>
+                            </tr>
+                            <tr class="paddingT40">
+                                <td>
+                                    <label class="login-label" for="conf-senha">Senha</label>
+                                </td>
+                                <td class="width100percent">
+                                    <input class="login-input" id="conf-senha" name="confirmaSenha" type="password"
+                                        placeholder="Confirma senha" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr class="paddingT20B40">
+                                <td>
+                                    <label class="login-label" for="telefone">Telefone</label>
+                                </td>
+                                <td class="width100percent">
+                                    <input class="login-input" id="telefone" name="telefone" type="text"
+                                        placeholder="Telefone">
+                                </td>
                             </tr>
                             <tr>
-                              <td colspan="2">
-                                <table>
-                                  <tr class="options">
-                                    <td>Modo Vendedor</td>
-                                    <td>
-                                        <label class="switch">
-                                          <input id="noticias" name="noticias" type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                      </td>
-                                  </tr>
-                                  <tr class="options">
-                                    <td>Salvar cartão</td>
-                                    <td>
-                                        <label id="config-switch" class="switch">
-                                        <input id="boticias" name="boticias" type="checkbox">
-                                        <span class="slider round"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr class="options">
-                                    <td>Mudar foto de perfil</td>
-                                    <td class="paddingL240 paddingT5">
-                                        <div class="file-input-container">
-                                            <label for="imagens" class="login-button file-input-label">Salvar</label>
-                                            <input type="file" id="imagens" name="imagens" multiple>
-                                          </div>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
+                                <td colspan="2" class="textCenter paddingT40">
+                                    <button id='login-button' type="submit">Finalizar</button>
+                                </td>
                             </tr>
-                            <tr>
-                              
-                              <td>
-                                
-                              </td>
-                            </tr>
-                            <tr>
-                              <td colspan="2" class="uploadCentralizeProfile">
-                                <button id="login-button" type="button" >Upload</button>
-                              </td>
-                            </tr>
-                          </table>
-                    </div>
+                        </table>
+                    </form>
                 </td>
             </tr>
         </table>
@@ -270,6 +269,7 @@
             </tr>
         </table>
     </footer>
+    <script src="JavaScript/script.js"></script>
 </body>
 
 </html>

@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFU Marketplace</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <script src="../JavaScript/script.js"></script>
-    <script src="../JavaScript/loginRedirect.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+    <script src="JavaScript/script.js"></script>
     <header>
-        <a href="../index.html">
+        <a href="index.html">
             <div class="botaoLogo">
 
-                <img src="../Images/logoUFU.png" alt="logo" width="70" height="70">
+                <img src="Images/logoUFU.png" alt="logo" width="70" height="70">
             </div>
         </a>
         <div class="busca">
             <input type="text" class="caixaBusca">
             <a href="busca.html">
                 <div class="botaoBusca">
-                    <img src="../Images/search.svg" width="42" height="42" alt="Botao de busca">
+                    <img src="Images/search.svg" width="42" height="42" alt="Botao de busca">
                 </div>
             </a>
         </div>
@@ -138,12 +137,12 @@
 
     <main>
         <div class="opacityEffect"></div>
-        <form class="novoAnuncio" action="../php/anuncio.php">
+        <form class="novoAnuncio" method="POST" action="php/anuncio.php">
             <h1 class="tituloNovoProduto nomeProduto">Anunciar novo produto</h1>
             <table>
                 <tr>
                     <td><label class="login-label" for="nome">Nome do produto</label></td>
-                    <td><input class="login-input" type="text" id="nome" placeholder="Nome do produto"></td>
+                    <td><input class="login-input" type="text" name="titulo" id="nome" placeholder="Nome do produto"></td>
                 </tr>
                 <tr>
                     <td><label class="login-label" for="estadoProduto">Estado do produto</label></td>
@@ -158,39 +157,40 @@
                 </tr>
                 <tr>
                     <td><label class="login-label" for="Preco">Preco</label></td>
-                    <td><input class="login-input" type="text" id="Preco" placeholder="Preço"></td>
+                    <td><input class="login-input" type="text" name="preco" id="Preco" placeholder="Preço"></td>
                 </tr>
                 <tr>
                     <td><label class="login-label" for="cep">CEP</label></td>
-                    <td><input class="login-input" type="text" id="cep" placeholder="CEP"></td>
+                    <td><input class="login-input" type="text" name="CEP" id="cep" placeholder="CEP"></td>
                 </tr>
                 <tr>
                     <td><label class="login-label" for="bairro">Bairro</label></td>
-                    <td><input class="login-input" type="text" id="bairro" placeholder="Bairro"></td>
+                    <td><input class="login-input" type="text" id="bairro" name="bairro" placeholder="Bairro"></td>
                 </tr>
                 <tr>
                     <td><label class="login-label" for="cidade">Cidade</label></td>
-                    <td><input class="login-input" type="text" id="cidade" placeholder="Cidade"></td>
+                    <td><input class="login-input" type="text" id="cidade" name="cidade" placeholder="Cidade"></td>
                 </tr>
                 <tr>
                     <td><label class="login-label" for="categoria">Categoria</label></td>
                     <td>
-                        <select class="check-input" name="estadoProduto" id="estadoProduto">
-                            <option value="Outro">Outro</option>
-                            <option value="Veiculo">Veículo</option>
-                            <option value="Eletronico">Eletrônico</option>
-                            <option value="Imovel">Imóvel</option>
-                            <option value="Movel">Móvel</option>
-                            <option value="Vestuario">Vestuário</option>
+                        <select class="check-input" name="codCategoria" id="categoria">
+                            <!-- gerar com script dinamico -->
+                            <option value="2">Veículo</option>
+                            <option value="3">Eletrônico</option>
+                            <option value="3">Imóvel</option>
+                            <option value="5">Vestuário</option>
+                            <option value="6">Móvel</option>
+                            <option value="7">Outro</option>
                         </select>
                     </td>
                 </tr>
-                <tr style="height: 50px;">
+                <tr class="height50">
                     <td><label class="login-label" for="imagens">Imagens</label></td>
                     <td>
                         <div class="file-input-container">
                             <label for="imagens" class="login-button file-input-label">Enviar</label>
-                            <input type="file" id="imagens" name="imagens" multiple>
+                            <input type="file" id="imagens" name="img" multiple>
                         </div>
                     </td>
                 </tr>
@@ -201,7 +201,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="padding-left: 15%;"><button id="login-button" type="submit"
+                    <td class="paddingL15percent"><button id="login-button" type="submit"
                             class="login-button">Finalizar</button></td>
                 </tr>
             </table>
