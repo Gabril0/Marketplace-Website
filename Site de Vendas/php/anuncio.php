@@ -1,5 +1,10 @@
 <?php
     require "../conexaoMysql.php";
+    require "isLogged.php";
+
+    session_start();
+    verifyLoggin();
+
     $database = mysqlConnect();
 
     $titulo = $_POST["titulo"] ?? "";

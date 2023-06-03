@@ -1,25 +1,8 @@
-document.addEventListener("DOMContentLoaded",()=>{
-  let botaoBusca = document.getElementsByClassName("botaoBusca")
+document.addEventListener("DOMContentLoaded", () => {
+  //let botaoBusca = document.getElementsByClassName("botaoBusca")
   //botaoBusca.innerChild.addEventListener("click", search);
 
-  isLoggedIn();
-  buttonChange();
 })
-
-function buttonChange(){
-  let img1 = document.querySelector(".imagem1");
-  let img2 = document.querySelector(".imagem2");
-  let botaoDir = document.querySelector(".rightButton");
-  let botaoEsq = document.querySelector(".leftButton");
-  botaoDir.addEventListener("click",()=>{
-    img1.style.display = "none";
-    img2.style.display = "inline-block";
-  })
-  botaoEsq.addEventListener("click",()=>{
-    img2.style.display = "none";
-    img1.style.display = "inline-block";
-  })
-}
 
 function search() {
   let input = document.getElementsByClassName("caixaBusca");
@@ -29,27 +12,25 @@ function search() {
   let sendArray;
 
   for (let i = 0; i < 5; i++) {
-      sendArray[i] = array[i]
+    sendArray[i] = array[i]
   }
 
   let options = {
-      method: post,
-      body: sendArray
+    method: post,
+    body: sendArray
   }
 
   fetch("php/getproduct.php", options);
   window.location = "busca.html"
 }
 
-function isLoggedIn() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "../php/isLogged.php", true)
-  let headerIcons = document.getElementsByClassName("headerA");
+function verifyLogin () {
+  let headerIcons = document.querySelectorAll(".headerA");
 
   for (let i = 0; i < headerIcons.length; i++) {
-    headerIcons[i].onclick = function (){
-      this.href = "html/loginPage.html"
-      xhr.send();
-    }
+    headerIcons[i].addEventListener("click", function () {
+        let response = fetch("isLogged.php")
+        window.location = response.detail;
+    });
   }
 }
