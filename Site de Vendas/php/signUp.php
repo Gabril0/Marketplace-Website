@@ -68,6 +68,6 @@ if (isset($_SESSION['emailUsuario'], $_SESSION['loginString']))
 else
     $response = new RequestResponse(false, '');
 
-echo json_encode($response)
-
+header("Content-Type: application/json");
+echo json_encode($response);
 ?>

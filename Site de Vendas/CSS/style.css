@@ -176,7 +176,6 @@ table{
 }
 
 .produto{
-visibility: hidden;
 display: inline-block;
 border: 0 none;
 border-radius: 25px;
@@ -998,7 +997,7 @@ a{
    padding: 8px;
 }
 
-.nomeProdutoLocation{
+.nomeProdutolocation{
   font-size: 35px; 
   position: relative;
   left: 10.5%; top: 22%

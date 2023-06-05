@@ -3,7 +3,7 @@
     require "isLogged.php";
 
     session_start();
-    verifyLoggin();
+    //verifyLoggin();
 
     $database = mysqlConnect();
 
@@ -34,6 +34,7 @@
         //     VALUES ?
         //     SQL;
 
+        echo  "<script>alert('enviado com Sucesso!);</script>";
         echo ' titulo: '. $titulo, '| descricao: ' . $descricao, '| preco: ' . $preco, '| datahora: ' . $dataHora, '| cep: ' . $CEP, '| bairro: ' . $bairro, '| cidade: ' . $cidade, '| estado: ' . $estado, '| cod1: '. $codCategoria, '| cod2: ' . $codAnunciante;
         $stmt = $database->prepare($query);
         if (!$stmt->execute([$titulo, $descricao, $preco, $dataHora, $CEP, $bairro, $cidade, $estado, intval($codCategoria), $codAnunciante]))
@@ -45,12 +46,11 @@
         
         $database->commit();//confirma as transações feitas anteriormente com o banco
     
-        header("Location: ../html/obrigado.html");
-            exit();
+        header("Content-Type: application/json");
+        echo json_encode("obrigado.html");
 
     }catch(Exception $e) {
         $database->rollBack();//nega e volta atras da transações feitas
         exit("Falha ao cadastrar anuncio" . $e->getMessage());
     }
-
 ?>
