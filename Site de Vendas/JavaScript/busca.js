@@ -1,5 +1,5 @@
 window.onload = function (){
-    option = localStorage.getItem("option")
+    option = JSON.parse(localStorage.getItem("option"));
     alert(option.body);
 
     getProducts();

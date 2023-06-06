@@ -24,7 +24,7 @@ function search(string) {
     body: JSON.stringify(array)
   }
 
-  localStorage.setItem("option", option);
+  localStorage.setItem("option", JSON.stringify(option));
 
   window.location = "busca.html"
 }
