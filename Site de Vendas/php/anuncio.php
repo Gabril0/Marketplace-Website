@@ -1,6 +1,8 @@
 <?php
 require "../conexaoMysql.php";
+require "isLogged.php";
 
+verifyLogin();
 //session_start();
 
 $database = mysqlConnect();
@@ -14,8 +16,8 @@ $bairro = $_POST["bairro"] ?? "";
 $cidade = $_POST["cidade"] ?? "";
 $estado = $_POST["estadoProduto"] ?? "";
 $codCategoria = $_POST["codCategoria"] ?? "";
-$codAnunciante = 2;
-// $codAnunciante = $_SESSION['codAnunciante'];
+$codAnunciante = 3;
+//$codAnunciante = intval($_SESSION['codAnunciante']);
 //$img = $_POST["img"] ?? "";
 
 try {
@@ -32,8 +34,6 @@ try {
     //     VALUES ?
     //     SQL;
 
-    echo "<script>alert('enviado com Sucesso!);</script>";
-    echo ' titulo: ' . $titulo, '| descricao: ' . $descricao, '| preco: ' . $preco, '| datahora: ' . $dataHora, '| cep: ' . $CEP, '| bairro: ' . $bairro, '| cidade: ' . $cidade, '| estado: ' . $estado, '| cod1: ' . $codCategoria, '| cod2: ' . $codAnunciante;
     $stmt = $database->prepare($query);
     if (!$stmt->execute([$titulo, $descricao, $preco, $dataHora, $CEP, $bairro, $cidade, $estado, intval($codCategoria), $codAnunciante]))
         throw new Exception('Falha de inserção de produto');
@@ -44,7 +44,7 @@ try {
 
     $database->commit(); //confirma as transações feitas anteriormente com o banco
 
-    header("location: ../obrigado.html");
+    header("Location: ../obrigado.html");
     exit();
     // header("Content-Type: application/json");
     // echo json_encode("obrigado.html");

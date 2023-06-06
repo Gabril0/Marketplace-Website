@@ -21,19 +21,22 @@ class Produto{
     require "../conexaoMysql.php";
     $database = mysqlConnect();
     $tamPagina = 2;
-    $palavrasChave = $_POST["palavrasChave"] ?? "";
+    $body = file_get_contents('php://input');
+    $palavrasChave = json_decode($body, true);
 
+    error_log($palavrasChave);
+    
     try{
 
     $query = <<<SQL
     SELECT id, nome, precoOriginal, precoDesconto, descricao
     FROM Anuncio
     WHERE 
-        descricao like ? AND
-        descricao like ? AND
-        descricao like ? AND
-        descricao like ? AND
-        descricao like ?
+        descricao like ? OR IS NULL AND
+        descricao like ? OR IS NULL AND
+        descricao like ? OR IS NULL AND
+        descricao like ? OR IS NULL AND
+        descricao like ? OR IS NULL
     SQL;
 
     $stmt = $database->prepare($query);

@@ -1,76 +1,39 @@
-// // document.addEventListener("DOMContentLoaded", () => {
-// //   //let botaoBusca = document.getElementsByClassName("botaoBusca")
-// //   //botaoBusca.innerChild.addEventListener("click", search);
+var option;
 
-// // })
-// window.onscroll = function () {
-//   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-//     getProducts();
-//   }
-// };
+document.addEventListener("DOMContentLoaded", function() {  
+    verifyLogin();
 
-// function search() {
-//   let input = document.getElementsByClassName("caixaBusca");
+    let caixaBusca = document.querySelector(".caixaBusca");
+    let botaoBusca = document.querySelector(".botaoBusca img"); 
+    botaoBusca.addEventListener("click", () => search(caixaBusca.value));
+})
 
-//   let string = input.value;
-//   let array = string.split(" ");
-//   let sendArray;
+window.onscroll = function () {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    getProducts();
+  }
+};
 
-//   for (let i = 0; i < 5; i++) {
-//     sendArray[i] = array[i]
-//   }
+function search(string) {
+  
+  let array = [];
+  array = string.split(" ");
 
-//   let options = {
-//     method: post,
-//     body: sendArray
-//   }
+  option = {
+    method: 'post',
+    body: JSON.stringify(array)
+  }
 
-//   fetch("php/getproduct.php", options);
-//   window.location = "busca.html"
-// }
+  localStorage.setItem("option", option);
 
-// function renderSearch(newProducts) {
-//   const prodClass = document.getElementsByClassName("productTd")
-//   const template = document.getElementsByClassName("template")
+  window.location = "busca.html"
+}
 
-//   for (let product of newProducts) {
-//       let productCard = template.innerHTML
-//           .replace("{{nome-prod}}", product.nome)
-//           .replace("{{preco-original}}", product.precoOriginal)
-//           .replace("{{preco-desconto}}", product.precoDesconto)
+function verifyLogin() {
 
-//           console.log(product.nome, product.precoOriginal,  product.precoDesconto)
-//       prodClass.insertAdjacentHTML("beforend", productCard);
-//   }
-// }
+    var headerIcons = document.querySelectorAll(".headerA");
 
-// async function getProducts() {
-
-//   try {
-
-//       let response = await fetch("php/getProducts.php");
-      
-//       if (!response.ok)
-//            throw new Error(response.statusText);
-
-//       var products = await response.json();
-//   }
-//   catch (e) {
-//       console.error(e);
-//       return;
-//   }
- 
-//   renderSearch(products);
-// }
-
-// function verifyLogin () {
-//   let headerIcons = document.querySelectorAll(".headerA");
-
-//   for (let i = 0; i < headerIcons.length; i++) {
-//     headerIcons[i].addEventListener("click", function () {
-//         let response = fetch("php/isLogged.php")
-//         if(!response.success)
-//           window.location = response.path
-//     });
-//   }
-// }
+    for (var botao of headerIcons) {
+        botao.addEventListener("click", () => fetch("php/isLogged.php"));
+    }
+}

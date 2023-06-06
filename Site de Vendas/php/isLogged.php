@@ -1,32 +1,13 @@
 <?php
 
-session_start();
-
-class RequestResponse
+function verifyLogin()
 {
-    public $success;
-    public $path;
+  session_start();
 
-    function __construct($success, $path)
-    {
-        $this->success = $success;
-        $this->path = $path;
-    }
+  if (!isset($_SESSION['emailAnunciante'])) {
+    header("Location: ../loginPage.html");
+    exit();
+  }
 }
-    verifyLoggin();
 
-    function verifyLoggin()
-    { 
-      if (!isset($_SESSION['emailAnunciante'])) {
-        $response = new RequestResponse(false, "loginPage.html");
-        header("location: loginPage.html");
-        exit();
-
-      }else{
-        $response = new RequestResponse(true, "");
-      }
-      
-      header('Content-type: application/json');
-      echo json_encode($response);
-    }
 ?>

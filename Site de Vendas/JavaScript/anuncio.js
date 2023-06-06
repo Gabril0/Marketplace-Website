@@ -13,6 +13,6 @@ async function cadastraAnuncio(form) {
         body: formData
     }
 
-    let response = await fetch("php/anuncio.php", option)
-    window.location = response;
+    await fetch("php/anuncio.php", option)
+    window.location = "obrigado.html"
 }
