@@ -1,6 +1,7 @@
 <?php
 
-class Produto{
+class Produto
+{
     public $id;
     public $name;
     public $precoOriginal;
@@ -9,49 +10,55 @@ class Produto{
     //public $img;
 
     function __construct($id, $name, $precoOriginal, $precoDesconto, $descricao)
-  {
-    $this->id = $id;
-    $this->name = $name; 
-    $this->precoOriginal = $precoOriginal;
-    $this->precoDesconto = $precoOriginal*(10/100);
-    $this->descricao = $descricao;
- 
-}
-}
-    require "../conexaoMysql.php";
-    $database = mysqlConnect();
-    $tamPagina = 2;
-    $body = file_get_contents('php://input');
-    $palavrasChave = json_decode($body, true);
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->precoOriginal = $precoOriginal;
+        $this->precoDesconto = $precoOriginal * (10 / 100);
+        $this->descricao = $descricao;
 
-    error_log($palavrasChave);
-    
-    try{
+    }
+}
+require "../conexaoMysql.php";
+$database = mysqlConnect();
+$body = file_get_contents('php://input');
+$option = json_decode($body);
+$palavrasChave = $option->body;
+
+try {
 
     $query = <<<SQL
-    SELECT id, nome, precoOriginal, precoDesconto, descricao
-    FROM Anuncio
-    WHERE 
-        descricao like ? OR IS NULL AND
-        descricao like ? OR IS NULL AND
-        descricao like ? OR IS NULL AND
-        descricao like ? OR IS NULL AND
-        descricao like ? OR IS NULL
+        SELECT codigo, titulo, preco, descricao 
+        FROM Anuncio 
+        WHERE descricao 
+        LIKE ?
     SQL;
+    
+    // $conditions = "";
+    // $args = array();
+    // foreach ($palavrasChave as $i => $key) {
+    //     $condition = "descricao LIKE ?";
+    //     if ($i > 0) {
+    //         $condition = "OR " . $condition;
+    //     }
+    //     $conditions .= $condition;
+    //     $args[] = "%" . $key . "%";
+    // }
+
+    // $query = "SELECT id, nome, precoOriginal, precoDesconto, descricao
+    //           FROM Anuncio
+    //           WHERE " . $conditions;
 
     $stmt = $database->prepare($query);
-    if (!$stmt->execute(["%" . $palavrasChave[0] . "%", "%" . $palavrasChave[1] . "%", "%" . $palavrasChave[2] . "%", "%" . $palavrasChave[3] . "%", "%" . $palavrasChave[4] . "%"]))
-        throw new Exception('Falha de inserção de produto');
+    if (!$stmt->execute($palavrasChave[0]))
+        throw new Exception('falha Ao buscar produtos');
     else
-        for($i = 0; $i < $tamPagina; $i++){
-            $row = $stmt->fetch();
-            new Produto($row['id'], $row['nome'], $row['precoOriginal'], $row['precoDesconto'], $row['descricao']);            
-        }
-        
-    header('Content-type: application/json');
-    echo json_encode($randProds); //retornando objeto json
+        $result = $stmt->fetch();
 
-    }catch (Exception $e){
-        exit("Falha ao buscar");
-    }
+        header('Content-Type: application/json');
+        echo json_encode($result);
+
+} catch (Exception $e) {
+    exit("Falha ao buscar ($palavrasChave)");
+}
 ?>

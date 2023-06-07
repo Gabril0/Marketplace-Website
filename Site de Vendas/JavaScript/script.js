@@ -19,12 +19,7 @@ function search(string) {
   let array = [];
   array = string.split(" ");
 
-  option = {
-    method: 'post',
-    body: JSON.stringify(array)
-  }
-
-  localStorage.setItem("option", JSON.stringify(option));
+  localStorage.setItem("array", JSON.stringify(array));
 
   window.location = "busca.html"
 }
