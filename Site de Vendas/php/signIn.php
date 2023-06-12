@@ -39,7 +39,11 @@ try {
         session_start();
         $_SESSION['emailAnunciante'] = $row['email'];
         $_SESSION['codAnunciante'] = $row['codigo'];
+<<<<<<< HEAD
         $response = new RequestResponse(true, 'perfilPage.html');
+=======
+        $response = new RequestResponse(true, '../perfilPage.html');
+>>>>>>> 722ce9cf1e3f9a6143d4d467c3570e7567b0a6d1
     } else {
         $response = new RequestResponse(false, '');
 

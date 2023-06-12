@@ -1,6 +1,16 @@
 <?php
+<<<<<<< HEAD
 require "../conexaoMysql.php";
 require "isLogged.php";
+=======
+    require "../conexaoMysql.php";
+    require "isLogged.php";
+
+    session_start();
+    verifyLoggin();
+
+    $database = mysqlConnect();
+>>>>>>> 722ce9cf1e3f9a6143d4d467c3570e7567b0a6d1
 
 verifyLogin();
 //session_start();
@@ -38,9 +48,20 @@ try {
     if (!$stmt->execute([$titulo, $descricao, $preco, $dataHora, $CEP, $bairro, $cidade, $estado, intval($codCategoria), $codAnunciante]))
         throw new Exception('Falha de inserção de produto');
 
+<<<<<<< HEAD
     // $smt = $database->prepare($queryIMG);
     // if (!$smt->execute([$img]));
     //     throw new Exception('Falha de inserção da foto');
+=======
+        // $smt = $database->prepare($queryIMG);
+        // if (!$smt->execute([$img]));
+        //     throw new Exception('Falha de inserção da foto');
+        
+        $database->commit();//confirma as transações feitas anteriormente com o banco
+    
+        header("Location: ../obrigado.html");
+            exit();
+>>>>>>> 722ce9cf1e3f9a6143d4d467c3570e7567b0a6d1
 
     $database->commit(); //confirma as transações feitas anteriormente com o banco
 
