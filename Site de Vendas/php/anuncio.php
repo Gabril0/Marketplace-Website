@@ -1,16 +1,6 @@
 <?php
-<<<<<<< HEAD
 require "../conexaoMysql.php";
 require "isLogged.php";
-=======
-    require "../conexaoMysql.php";
-    require "isLogged.php";
-
-    session_start();
-    verifyLoggin();
-
-    $database = mysqlConnect();
->>>>>>> 722ce9cf1e3f9a6143d4d467c3570e7567b0a6d1
 
 verifyLogin();
 //session_start();

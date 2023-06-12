@@ -64,19 +64,10 @@ try {
 }
 
 if (isset($_SESSION['emailUsuario'], $_SESSION['loginString']))
-<<<<<<< HEAD
     $response = new RequestResponse(true, 'perfilPage.html');
 else
     $response = new RequestResponse(false, '');
 
 header("Content-Type: application/json");
 echo json_encode($response);
-=======
-    $response = new RequestResponse(true, '../perfilPage.html');
-else
-    $response = new RequestResponse(false, '');
-
-echo json_encode($response)
-
->>>>>>> 722ce9cf1e3f9a6143d4d467c3570e7567b0a6d1
 ?>
